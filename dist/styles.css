@@ -6,25 +6,13 @@
 
 header{
     padding: 0px;
-    fill: #1a191a;
     text-align: left;
     align-items:left;
-    background-color: transparent;
+    background-color: black;
   }
 
 
-body {
-    width: 100%;
-    min-width: 320px; /* Adjust the minimum width as needed */
-    height: auto;
-    margin: 0;
-    display: block;
-    background-color: #161822;
-    min-height: 100vh; /* Ensure a minimum viewport height */
-    max-width: 100%;
-    overflow-x: hidden;
-    scroll-behavior: smooth;
-}
+
 
 main {
     width: 100%;
@@ -154,7 +142,6 @@ main {
     margin-top: 0;
     padding-top: 100px;
     position: relative;
-    
 }
 
 
