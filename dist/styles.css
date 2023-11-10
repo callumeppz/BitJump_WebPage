@@ -4,6 +4,9 @@
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+html, body {
+    overflow-x:hidden 
+  } 
 header{
     padding: 0px;
     text-align: left;
