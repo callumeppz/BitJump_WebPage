@@ -939,14 +939,8 @@ button:hover {
 
 /* Project Container Styles */
 
-trial {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+#project-rows {
   background: linear-gradient(270deg, #020203, #2c2c86);
-  height: 700px;
-  padding: 150px;
   color: antiquewhite;
 }
 
