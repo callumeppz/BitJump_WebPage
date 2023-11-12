@@ -612,11 +612,6 @@ video {
   background-color: rgb(30 58 138 / var(--tw-bg-opacity));
 }
 
-.bg-gray-700 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
-}
-
 .bg-gray-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
@@ -966,12 +961,12 @@ button:hover {
 }
 
 #new {
-  height: 600px;
+  height: inherit;
   width: 100%;
   background-image: url(Computer.jpg);
-  background-size: cover;
+  background-size:cover;
   background-attachment: fixed;
-  padding: 150px;
+  padding: 100px;
   margin-top: 40px;
 }
 
@@ -1034,11 +1029,6 @@ input[type=email], select, textarea {
     margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
-  .sm\:bg-gray-900 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-  }
-
   .sm\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -1064,11 +1054,6 @@ input[type=email], select, textarea {
     --tw-space-x-reverse: 0;
     margin-right: calc(2.5rem * var(--tw-space-x-reverse));
     margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
-  .md\:bg-gray-900 {
-    --tw-bg-opacity: 1;
-    background-color: rgb(17 24 39 / var(--tw-bg-opacity));
   }
 
   .md\:p-8 {

@@ -244,8 +244,6 @@ button:hover {
 /* Project Container Styles */
 
 #project-rows {
-
-
     background: linear-gradient(270deg, #020203, #2c2c86);
     color: antiquewhite;
 }
@@ -271,12 +269,12 @@ button:hover {
 }
 
 #new {
-    height: 600px;
+    height: inherit;
     width: 100%;
     background-image: url(Computer.jpg);
-    background-size: cover;
+    background-size:cover;
     background-attachment: fixed;
-    padding: 150px;
+    padding: 100px;
     margin-top: 40px;
 }
 
