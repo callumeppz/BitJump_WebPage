@@ -246,6 +246,7 @@ button:hover {
 #project-rows {
     background: linear-gradient(270deg, #020203, #2c2c86);
     color: antiquewhite;
+    height: inherit;
 }
 
 .flex-container {
@@ -269,12 +270,9 @@ button:hover {
 }
 
 #new {
-    height: inherit;
-    width: 100%;
     background-image: url(Computer.jpg);
     background-size:cover;
     background-attachment: fixed;
-    padding: 100px;
     margin-top: 40px;
 }
 
