@@ -254,11 +254,9 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-right: px;
 }
 .forms {
     height: 800px;
-    margin: 100px;
     background-color:#20088a;
     opacity: 0.5;
     display: flex;
