@@ -543,6 +543,10 @@ video {
   margin-bottom: 1rem;
 }
 
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
@@ -555,16 +559,8 @@ video {
   display: flex;
 }
 
-.h-6 {
-  height: 1.5rem;
-}
-
 .h-auto {
   height: auto;
-}
-
-.w-6 {
-  width: 1.5rem;
 }
 
 .w-full {
@@ -577,6 +573,10 @@ video {
 
 .cursor-pointer {
   cursor: pointer;
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .flex-col {
@@ -593,10 +593,6 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
-}
-
-.self-center {
-  align-self: center;
 }
 
 .rounded-lg {
@@ -621,17 +617,9 @@ video {
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
-.bg-transparent {
-  background-color: transparent;
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
-.bg-center {
-  background-position: center;
 }
 
 .p-2 {
@@ -640,10 +628,6 @@ video {
 
 .p-4 {
   padding: 1rem;
-}
-
-.text-left {
-  text-align: left;
 }
 
 .text-center {
@@ -668,6 +652,15 @@ video {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.font-bold {
+  font-weight: 700;
 }
 
 .text-white {
@@ -950,6 +943,23 @@ button:hover {
   background: linear-gradient(270deg, #020203, #2c2c86);
   color: antiquewhite;
   height: inherit;
+  margin: 0px;
+  padding: 0px;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction:column-reverse;
+  /* Set flex direction to column */
+  align-items: center;
+  /* Align items at the center horizontally */
+}
+
+/* Adjustments to maintain spacing */
+
+.article-text {
+  text-align: center;
+  margin-top: 4px;
 }
 
 .flex-container {
@@ -1074,12 +1084,12 @@ input[type=email], select, textarea {
     margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
-  .md\:p-8 {
-    padding: 2rem;
-  }
-
   .md\:p-6 {
     padding: 1.5rem;
+  }
+
+  .md\:p-8 {
+    padding: 2rem;
   }
 
   .md\:text-6xl {
@@ -1111,16 +1121,8 @@ input[type=email], select, textarea {
     padding: 4rem;
   }
 
-  .lg\:p-12 {
-    padding: 3rem;
-  }
-
   .lg\:p-8 {
     padding: 2rem;
-  }
-
-  .lg\:p-2 {
-    padding: 0.5rem;
   }
 
   .lg\:text-7xl {

@@ -240,13 +240,26 @@ button:hover {
     cursor: pointer;
     margin: 0;
 }
-
 /* Project Container Styles */
 
 #project-rows {
     background: linear-gradient(270deg, #020203, #2c2c86);
     color: antiquewhite;
     height: inherit;
+    margin: 0px;
+    padding: 0px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction:column-reverse; /* Set flex direction to column */
+    align-items: center; /* Align items at the center horizontally */
+}
+
+/* Adjustments to maintain spacing */
+.article-text {
+    text-align: center;
+    margin-top: 4px;
 }
 
 .flex-container {
@@ -254,6 +267,8 @@ button:hover {
     justify-content: center;
     align-items: center;
 }
+
+
 .forms {
     height: 800px;
     background-color:#20088a;
