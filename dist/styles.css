@@ -20,6 +20,18 @@ main {
     position: relative;
 }
 
+@media screen and (max-width: 640px) {
+    main {
+        padding: 10% 2% 200px; /* Adjust padding for smaller screens */
+    }
+
+    .slider-thumb::before {
+        width: 600px; /* Adjust the width for smaller screens */
+        height: 600px; /* Adjust the height for smaller screens */
+    }
+}
+
+
 /* Slider Animation */
 .slider-thumb::before {
     position: absolute;
