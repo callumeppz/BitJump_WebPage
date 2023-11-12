@@ -243,9 +243,9 @@ button:hover {
 
 /* Project Container Styles */
 
-.project-container {
+#project-rows {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     background: linear-gradient(270deg, #020203, #2c2c86);

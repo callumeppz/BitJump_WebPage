@@ -543,10 +543,6 @@ video {
   margin-bottom: 1rem;
 }
 
-.mb-4 {
-  margin-bottom: 1rem;
-}
-
 .mt-4 {
   margin-top: 1rem;
 }
@@ -943,9 +939,9 @@ button:hover {
 
 /* Project Container Styles */
 
-.project-container {
+#project-rows {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   background: linear-gradient(270deg, #020203, #2c2c86);
@@ -1030,10 +1026,6 @@ input[type=email], select, textarea {
 }
 
 @media (min-width: 640px) {
-  .sm\:mr-4 {
-    margin-right: 1rem;
-  }
-
   .sm\:mt-0 {
     margin-top: 0px;
   }
@@ -1070,10 +1062,6 @@ input[type=email], select, textarea {
     margin-bottom: 2rem;
   }
 
-  .md\:mr-8 {
-    margin-right: 2rem;
-  }
-
   .md\:max-w-sm {
     max-width: 24rem;
   }
@@ -1108,10 +1096,6 @@ input[type=email], select, textarea {
   .lg\:my-12 {
     margin-top: 3rem;
     margin-bottom: 3rem;
-  }
-
-  .lg\:mr-12 {
-    margin-right: 3rem;
   }
 
   .lg\:max-w-md {
