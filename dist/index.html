@@ -8,18 +8,17 @@
     <meta name="description" content="Computer Science Graduate">
     <meta name="robots" content="index, follow">
     <link rel="icon" href="dist/github.png">
-    <!-- Link to Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="input.css">
-    
+
 </head>
 
 <body class="bg-gray-900">
 
     <!-- Header and Tabs -->
     <header nav class="navbar navbar-expand navbar-dark bg-gray-900 nav">
-        <div class="nav-item text-center bg-transparent space-x-10">
+        <div class="nav-item text-center bg-transparent space-x-4 sm:space-x-8 md:space-x-10">
             <button class="tablinks bg-gray-900">Home</button>
             <button class="tablinks bg-gray-900">Projects</button>
             <button class="tablinks bg-gray-900">About</button>
@@ -41,7 +40,7 @@
                 </div>
 
                 <div class="textarea">
-                    <hr>
+                    <hr class="my-4 md:my-8 lg:my-12">
                     <p class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
                         <strong>My name is Callum Apps and I'm a Computer <br>Science Student based in Reading, UK.
                             You can <br>find more about me, my work and my <br> interests on GitHub or LinkedIn.</strong>
@@ -52,52 +51,49 @@
     </main>
 
     <!-- Project Container -->
-    <div class="project-container mt-8 space-y-4 flex flex-col md:flex-row">
-        <div class="flex-container mb-4 md:mr-4 lg:mr-8 bg-gray-700 sm:bg-gray-900 md:bg-gray-900">
-            <figure class="relative max-w-full md:max-w-sm transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
-                <img class="w-full md:w-96 h-auto rounded-lg" src="Computer.jpg" alt="image description">
+    <div class="project-container mt-8 space-y-4 flex flex-col sm:flex-row">
+        <div class="flex-container mb-4 sm:mr-4 md:mr-8 lg:mr-12 bg-gray-700 sm:bg-gray-900 md:bg-gray-900">
+            <figure class="relative max-w-full md:max-w-sm lg:max-w-md transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
+                <img class="w-full h-auto rounded-lg" src="Computer.jpg" alt="image description">
             </figure>
-            <p class="article-text mt-4 md:mt-0">Project 1, Random Maze Game</p>
+            <p class="article-text mt-4 sm:mt-0">Project 1, Random Maze Game</p>
         </div>
 
-    
-        <div class="flex-container mb-4 md:mr-4 lg:mr-8 bg-gray-700 sm:bg-gray-900 md:bg-gray-900">
-            <figure class="relative max-w-full md:max-w-sm transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
-                <img class="w-full sm:w-48 md:max-w-md lg:max-w-lg xl:max-w-xl h-auto rounded-lg" src="Computer.jpg" alt="image description">
-
-
+        <div class="flex-container mb-4 sm:mr-4 md:mr-8 lg:mr-12 bg-gray-700 sm:bg-gray-900 md:bg-gray-900">
+            <figure class="relative max-w-full md:max-w-sm lg:max-w-md transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
+                <img class="w-full h-auto rounded-lg" src="Computer.jpg" alt="image description">
             </figure>
-            <p class="article-text mt-4 md:mt-0">Project 2, Drone Simulation</p>
+            <p class="article-text mt-4 sm:mt-0">Project 2, Drone Simulation</p>
         </div>
     </div>
 
-<div>
-    <h6 id="new"></h6>
-</div>
+    <div>
+        <h6 id="new"></h6>
+    </div>
 
-<!-- Contact Form -->
-<form class="forms mt-8 space-y-4">
-    <h3 class="text-3xl">Contact Me</h3>
-    
-    <label for="1" class="text-lg">Name</label>
-    <input maxlength="16" name="user" type="text" id="1" class="w-full p-2 border rounded-md bg-white">
+    <!-- Contact Form -->
+    <form class="forms mt-8 space-y-4">
+        <h3 class="text-3xl">Contact Me</h3>
 
-    <label for="2" class="text-lg">Email</label>
-    <input name="email" type="email" id="2" class="w-full p-2 border rounded-md">
+        <label for="1" class="text-lg">Name</label>
+        <input maxlength="16" name="user" type="text" id="1" class="w-full p-2 border rounded-md bg-white">
 
-    <label for="3" class="text-lg">Option</label>
-    <select name="Query" id="3" class="w-full p-2 border rounded-md">
-        <option value=""></option>
-        <option value="Projects">Projects</option>
-        <option value="Contact me">Contact me</option>
-    </select>
+        <label for="2" class="text-lg">Email</label>
+        <input name="email" type="email" id="2" class="w-full p-2 border rounded-md">
 
-    <label for="4" class="text-lg">Query</label>
-    <textarea placeholder="Max 200 Characters" maxlength="200" name="message" id="4" cols="30" rows="10" class="w-full p-2 border rounded-md"></textarea>
+        <label for="3" class="text-lg">Option</label>
+        <select name="Query" id="3" class="w-full p-2 border rounded-md">
+            <option value=""></option>
+            <option value="Projects">Projects</option>
+            <option value="Contact me">Contact me</option>
+        </select>
 
-    <button id="submit" class="bg-blue-900 text-white p-2 rounded-md">Submit</button>
-</form>
+        <label for="4" class="text-lg">Query</label>
+        <textarea placeholder="Max 200 Characters" maxlength="200" name="message" id="4" cols="30" rows="10"
+            class="w-full p-2 border rounded-md"></textarea>
 
+        <button id="submit" class="bg-blue-900 text-white p-2 rounded-md">Submit</button>
+    </form>
 
     <!-- Footer for Social Links -->
     <footer class="mt-8">
