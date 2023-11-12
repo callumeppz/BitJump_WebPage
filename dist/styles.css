@@ -1,29 +1,20 @@
 * {
     margin: 0;
     padding: 0;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:sans-serif;
 }
 
 html, body {
-    overflow-x:hidden 
-  } 
-header{
-    padding: 0px;
-    text-align: left;
-    align-items:left;
-    background-color: black;
-  }
-
-
-
+  overflow-x:hidden 
+} 
 
 main {
     width: 100%;
     height: 1000px;
     margin: 0 auto;
     display: block;
-    background: linear-gradient(90deg, #492a81, #2c2c86);
-    clip-path: polygon(0% 15%, 100% 2%, 100% 100%, 0% 90%, 0% 20%);
+    background: linear-gradient(90deg, #020203, #2c2c86);
+    clip-path: polygon(0% 5%, 100% 2%, 100% 100%, 0% 100%, 0% 10%);
     padding: 10% 5% 200px; /* Adjust padding as needed */
     box-sizing: border-box;
     position: relative;
@@ -66,8 +57,8 @@ main {
 }
 
 h1{
-    font-size: 80PX;
-    color: #5a08c6;
+    font-size: 60PX;
+    color: #dbc1fc;
     transition: transform 0.3s;
     text-shadow: 2px 0 transparent, -2px 0 transparent, 0 2px #866bd7, 0 -2px #000000,
              1px 1px #5113e2, -1px -1px #3a14e4, 1px -1px #4010f0, -1px 1px #050ef9;
@@ -96,7 +87,7 @@ h2:hover{
 
 h3{
     font-size: 40PX;
-    color: #5a08c6;
+    color: #eadbff;
     transition: transform 0.3s;
     text-shadow: 2px 0 transparent, -2px 0 transparent, 0 2px #866bd7, 0 -2px #000000,
              1px 1px #5113e2, -1px -1px #3a14e4, 1px -1px #4010f0, -1px 1px #050ef9;
@@ -118,8 +109,9 @@ p{
     display: flex;
     justify-content: left;
     align-items: left; /* Center vertically and horizontally */
-    padding: 100px;
-    color: #a460fc;
+    padding: 30px;
+    padding-top: 100px;
+    color: #be8dff;
     transition: transform 0.3s;
     font-size: 20px;
     min-height: 90vh; /* Increase the minimum height */
@@ -196,8 +188,8 @@ h2:hover {
 
 button {
     color: antiquewhite;
-    border: #7700ff solid 1px;
-    background: #2c40a1;
+    border: #000000 solid 1px;
+    background: #000000;
     padding: 9px 16px;
     border: none;
     border-radius: 4px;
@@ -205,7 +197,8 @@ button {
 }
 
 button:hover {
-    transform: scale(1.2);
+    transform: scale(1.0);
+    transition: transform 0.3s;
     color: antiquewhite;
     background: #2c40a1;
     opacity: 0.5;
@@ -215,24 +208,17 @@ button:hover {
 /* Tab Styles */
 
 .tablinks {
-    color: antiquewhite;
-    background: #1a1c26;
-    padding: 15px 16px;
+    color: rgb(158, 113, 249);
     cursor: pointer;
-    right: 80px;
 }
 
 .tablinks:hover {
     transform: scale(1.1);
-    color: antiquewhite;
-    background: #515568;
     opacity: 0.5;
-    padding: 15px 16px;
 }
 
 .tabs {
     color: antiquewhite;
-
     background: #1a1c26;
     padding: 15px 16px;
     cursor: pointer;
@@ -242,33 +228,27 @@ button:hover {
 /* Project Container Styles */
 
 .project-container {
-    background: linear-gradient(90deg, #492a81, #2c2c86);
-    background-size: cover;
-    background-attachment: fixed;
-    height: 1200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-start;
-    padding-right: 0%;
+    align-items: center;
+    background: linear-gradient(270deg, #020203, #2c2c86);
+    height: 700px;
+    padding: 150px;
     color: antiquewhite;
-    clip-path: polygon(0% 15%, 100% 2%, 100% 100%, 0% 90%, 0% 20%);
-    text-align: center;
-    padding: 20px 30px;
-    align-self: center;
 }
 
-figure{
-    align-self: center;
+.flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: px;
 }
-
-
-
 .forms {
-    background-image: url(Computer.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    height: 1000px;
+    height: 800px;
+    margin: 100px;
+    background-color:#20088a;
+    opacity: 0.5;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -277,7 +257,17 @@ figure{
     color: antiquewhite;
     text-align: left;
     padding: 20px 30px;
-    clip-path: polygon(0% 15%, 100% 2%, 100% 100%, 0% 90%, 0% 20%);
+    /*clip-path: polygon(0% 15%, 100% 2%, 100% 100%, 0% 90%, 0% 20%);*/
+}
+
+#new {
+    height: 600px;
+    width: 100%;
+    background-image: url(Computer.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 150px;
+    margin-top: 40px;
 }
 
 /* Form Styles */
@@ -316,6 +306,5 @@ input[type=email], select, textarea {
     padding: 10px;
     color: rgb(230, 230, 230);
     font-size: 20px;
-    background: linear-gradient(90deg, #492a81, #2c2c86);
-    clip-path: polygon(0% 15%, 100% 2%, 100% 100%, 0% 90%, 0% 20%);
+    background-color: rgb(14, 3, 37);
 }
