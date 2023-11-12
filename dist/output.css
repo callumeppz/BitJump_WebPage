@@ -939,7 +939,7 @@ button:hover {
 
 /* Project Container Styles */
 
-{
+trial {
   display: flex;
   flex-direction: row;
   justify-content: center;
