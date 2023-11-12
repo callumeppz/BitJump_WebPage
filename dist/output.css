@@ -534,10 +534,6 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.fixed {
-  position: fixed;
-}
-
 .relative {
   position: relative;
 }
@@ -599,6 +595,10 @@ video {
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
 }
 
+.self-center {
+  align-self: center;
+}
+
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -630,12 +630,20 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-center {
+  background-position: center;
+}
+
 .p-2 {
   padding: 0.5rem;
 }
 
 .p-4 {
   padding: 1rem;
+}
+
+.text-left {
+  text-align: left;
 }
 
 .text-center {
@@ -1070,6 +1078,10 @@ input[type=email], select, textarea {
     padding: 2rem;
   }
 
+  .md\:p-6 {
+    padding: 1.5rem;
+  }
+
   .md\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
@@ -1099,8 +1111,16 @@ input[type=email], select, textarea {
     padding: 4rem;
   }
 
-  .lg\:p-32 {
-    padding: 8rem;
+  .lg\:p-12 {
+    padding: 3rem;
+  }
+
+  .lg\:p-8 {
+    padding: 2rem;
+  }
+
+  .lg\:p-2 {
+    padding: 0.5rem;
   }
 
   .lg\:text-7xl {
@@ -1115,10 +1135,6 @@ input[type=email], select, textarea {
 }
 
 @media (min-width: 1280px) {
-  .xl\:w-2\/4 {
-    width: 50%;
-  }
-
   .xl\:w-4\/5 {
     width: 80%;
   }
