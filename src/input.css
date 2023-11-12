@@ -243,7 +243,7 @@ button:hover {
 
 /* Project Container Styles */
 
-#project-rows {
+trial {
     display: flex;
     flex-direction: row;
     justify-content: center;
