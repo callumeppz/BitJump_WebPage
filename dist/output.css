@@ -1081,6 +1081,10 @@ input[type=email], select, textarea {
     padding: 2rem;
   }
 
+  .md\:p-4 {
+    padding: 1rem;
+  }
+
   .md\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
