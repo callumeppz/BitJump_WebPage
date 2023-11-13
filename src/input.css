@@ -192,20 +192,17 @@ h2:hover {
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
-    border: black;
     letter-spacing: 0.1rem;
-    @apply text-base; /* Use the appropriate text size class from Tailwind */
-    padding: 1rem 3rem;
+    padding: 0rem 1rem; /* Adjust the initial padding as needed */
     transition: 0.8s;
 }
 
 .tablinks:hover {
     color: #320c99;
     letter-spacing: 0.2rem;
-    padding: 1.1rem 3.1rem;
+    padding: 1.1rem 1.1rem; /* Adjust the initial and hover padding as needed */
     box-shadow: 0 0 35px var(--clr);
 }
-
 
 /* Project Container Styles */
 
