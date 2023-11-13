@@ -19,7 +19,7 @@ main {
     margin: 0 auto;
     display: block;
     background: linear-gradient(90deg, #020203, #2c2c86);
-    clip-path: polygon(0% 5%, 100% 2%, 100% 100%, 0% 100%, 0% 10%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     padding: 10% 5% 200px; /* Adjust padding as needed */
     box-sizing: border-box;
     position: relative;

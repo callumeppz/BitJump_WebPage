@@ -706,8 +706,8 @@ main {
   margin: 0 auto;
   display: block;
   background: linear-gradient(90deg, #020203, #2c2c86);
-  -webkit-clip-path: polygon(0% 5%, 100% 2%, 100% 100%, 0% 100%, 0% 10%);
-          clip-path: polygon(0% 5%, 100% 2%, 100% 100%, 0% 100%, 0% 10%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
   padding: 10% 5% 200px;
   /* Adjust padding as needed */
   box-sizing: border-box;
@@ -1073,16 +1073,16 @@ input[type=email], select, textarea {
     margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .md\:p-4 {
+    padding: 1rem;
+  }
+
   .md\:p-6 {
     padding: 1.5rem;
   }
 
   .md\:p-8 {
     padding: 2rem;
-  }
-
-  .md\:p-4 {
-    padding: 1rem;
   }
 
   .md\:text-6xl {
