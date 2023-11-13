@@ -203,7 +203,7 @@ h2:hover {
     text-transform: uppercase;
     border: black;
     letter-spacing: 0.1rem;
-    font-size: 1.1rem;
+    font-size: inherit;
     padding: 1rem 3rem;
     transition: 0.8s;
   }
