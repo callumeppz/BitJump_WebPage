@@ -947,7 +947,8 @@ h2:hover {
 }
 
 .forms {
-  height: inherit;
+  height: 100%;
+  /* Set the height to 100% */
   margin: 45px;
   background: linear-gradient(90deg, #320c99, #000000);
   display: flex;
