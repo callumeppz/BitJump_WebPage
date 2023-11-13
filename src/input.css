@@ -196,6 +196,7 @@ h2:hover {
 /* Button Styles */
 
 .tablinks {
+    border-radius: 10px;
     position: relative;
     color: #fff;
     text-decoration: none;
@@ -204,15 +205,13 @@ h2:hover {
     letter-spacing: 0.1rem;
     font-size: 1.1rem;
     padding: 1rem 3rem;
-    transition: 1.8s;
+    transition: 0.8s;
   }
 
 .tablinks:hover {
     color: #320c99;
-    transition: transform 0.9s;
     letter-spacing: 0.2rem;
     padding: 1.1rem 3.1rem;
-    background: var(--clr);
     box-shadow: 0 0 35px var(--clr);
   }
 
