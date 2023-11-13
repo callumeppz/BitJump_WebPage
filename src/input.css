@@ -203,17 +203,18 @@ h2:hover {
     text-transform: uppercase;
     border: black;
     letter-spacing: 0.1rem;
-    font-size: inherit;
+    @apply text-base; /* Use the appropriate text size class from Tailwind */
     padding: 1rem 3rem;
     transition: 0.8s;
-  }
+}
 
 .tablinks:hover {
     color: #320c99;
     letter-spacing: 0.2rem;
     padding: 1.1rem 3.1rem;
     box-shadow: 0 0 35px var(--clr);
-  }
+}
+
 
 /* Project Container Styles */
 

@@ -654,6 +654,11 @@ video {
   line-height: 1.25rem;
 }
 
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -896,7 +901,9 @@ h2:hover {
   text-transform: uppercase;
   border: black;
   letter-spacing: 0.1rem;
-  font-size: inherit;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  /* Use the appropriate text size class from Tailwind */
   padding: 1rem 3rem;
   transition: 0.8s;
 }
