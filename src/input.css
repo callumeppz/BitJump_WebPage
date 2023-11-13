@@ -128,15 +128,7 @@ p {
 
 
 /* Header Styles */
-header {
-    width: inherit;
-    height: inherit;
-    margin: 0 auto;
-    margin: 0;
-    position:absolute;
-    width: 100%;
-    z-index: 1;
-}
+
 
 /* Main Content Styles */
 main {
@@ -196,7 +188,6 @@ h2:hover {
 /* Button Styles */
 
 .tablinks {
-    border-radius: 10px;
     position: relative;
     color: #fff;
     text-decoration: none;
