@@ -579,6 +579,12 @@ video {
   flex-direction: column;
 }
 
+.space-x-2 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
@@ -878,43 +884,25 @@ h2:hover {
 
 /* Button Styles */
 
-button {
-  color: antiquewhite;
-  border: #000000 solid 1px;
-  background: #000000;
-  padding: 9px 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-button:hover {
-  transform: scale(1.0);
-  transition: transform 0.3s;
-  color: antiquewhite;
-  background: #2c40a1;
-  opacity: 0.5;
-  padding: 9px 16px;
-}
-
-/* Tab Styles */
-
 .tablinks {
-  color: rgb(158, 113, 249);
-  cursor: pointer;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: black;
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
+  padding: 1rem 3rem;
+  transition: 1.8s;
 }
 
 .tablinks:hover {
-  transform: scale(1.1);
-  opacity: 0.5;
-}
-
-.tabs {
-  color: antiquewhite;
-  background: #1a1c26;
-  padding: 15px 16px;
-  cursor: pointer;
-  margin: 0;
+  color: #320c99;
+  transition: transform 0.9s;
+  letter-spacing: 0.2rem;
+  padding: 1.1rem 3.1rem;
+  background: var(--clr);
+  box-shadow: 0 0 35px var(--clr);
 }
 
 /* Project Container Styles */
@@ -1028,6 +1016,12 @@ input[type=email], select, textarea {
     flex-direction: row;
   }
 
+  .sm\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1rem * var(--tw-space-x-reverse));
+    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .sm\:space-x-8 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(2rem * var(--tw-space-x-reverse));
@@ -1063,6 +1057,12 @@ input[type=email], select, textarea {
     --tw-space-x-reverse: 0;
     margin-right: calc(2.5rem * var(--tw-space-x-reverse));
     margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
+  .md\:space-x-16 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(4rem * var(--tw-space-x-reverse));
+    margin-left: calc(4rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
   .md\:p-6 {
