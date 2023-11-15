@@ -13,6 +13,7 @@
 html {
     scroll-behavior: smooth; /* Added smooth scrolling behavior */
     cursor:crosshair;
+    overflow-x: hidden;
 }
 
 body {
