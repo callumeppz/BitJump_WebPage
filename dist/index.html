@@ -42,12 +42,16 @@
         </nav>
     </header>
 
-    <button onclick="myFunction()">Toggle dark mode</button>
+    <label class="switch">
+        <input id="darkModeToggle" class="darkmode" onclick="toggleDarkMode()">
+        <span class="slider round"></span>
+      </label>
+      
 
     <script>
-        function myFunction() {
-           var element = document.body;
-           element.classList.toggle("dark-mode");
+        function toggleDarkMode() {
+        const body = document.querySelector('body');
+        body.classList.toggle('dark-mode');
         }
     </script>
   

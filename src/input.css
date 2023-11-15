@@ -16,6 +16,10 @@ html {
     overflow-x: hidden;
 }
 
+body * {
+    @apply transition-colors duration-200;
+}
+
 body {
     background: linear-gradient(90deg, #d4bfff, #c3c3f0);
     margin: 0;
@@ -23,11 +27,12 @@ body {
     font-family: 'montserratthin_italic';
     overflow-x: hidden;
     display: block;
+    
 }
 
   
 .dark-mode {
-    background: linear-gradient(90deg, #161616, rgb(76, 2, 160));
+    background: linear-gradient(90deg, #161616, rgb(25, 25, 26));
     color: white;
 }
 
@@ -35,6 +40,40 @@ body {
     background-color: #000000;
 }
 
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    left: 4px;
+    bottom: 4px;
+    background-image: url("placeholdermoon.png");
+    background-color: rgba(255, 255, 255, 0.116);
+    background-size: cover; /* Adjust as needed */
+    -webkit-transition: .4s;
+    transition:  .6s;
+  }
+  
+  .dark-mode .slider {
+    background-image: url("sun.png");
+  }
+  
 
 /* You can specify specific elements where needed */
 /* For example, if you want a container to use the custom font */
@@ -127,7 +166,7 @@ h2:hover{
 
 h3{
     font-size: 40PX;
-    color: #eadbff;
+    color: #7615ff;
     transition: transform 0.3s;
     text-shadow: 2px 0 transparent, -2px 0 transparent, 0 2px #866bd7, 0 -2px #000000,
              1px 1px #5113e2, -1px -1px #3a14e4, 1px -1px #4010f0, -1px 1px #050ef9;
@@ -142,7 +181,7 @@ h3:hover{
 }
 
 h6 {
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 p {
@@ -206,7 +245,7 @@ h2:hover {
 
 .article-text {
     background-color:#adadff;
-    color: antiquewhite;
+    color: rgb(66, 3, 255);
     padding: 10px;
     margin-top: 10px;
     opacity: 10;
@@ -220,7 +259,7 @@ h2:hover {
 
 .article-text:hover {
     transform: scale(1.05);
-    background-color:rgb(135, 0, 253);
+    background-color:rgb(255, 255, 255);
     opacity: 100;
 }
 
@@ -297,13 +336,14 @@ h2:hover {
 
 .forms {
     height: 100%; /* Set the height to 100% */
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     padding-right: 0%;
-    text-align: ;
-    padding: 0px 300px;
+    text-align: left;
+    padding: 20px 30px;
     /*clip-path: polygon(0% 15%, 100% 2%, 100% 100%, 0% 90%, 0% 20%);*/
 }
 
@@ -344,5 +384,5 @@ input[type=email], select, textarea {
     padding: 10px;
     color: rgb(230, 230, 230);
     font-size: 20px;
-    background-color: rgb(14, 3, 37);
+    background-color: rgb(19, 19, 19);
 }
