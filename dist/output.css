@@ -1053,14 +1053,13 @@ h2:hover {
 .forms {
   height: 100%;
   /* Set the height to 100% */
-  width: 800px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   padding-right: 0%;
   text-align: ;
-  padding: 20px 30px;
+  padding: 0px 300px;
   /*clip-path: polygon(0% 15%, 100% 2%, 100% 100%, 0% 90%, 0% 20%);*/
 }
 
