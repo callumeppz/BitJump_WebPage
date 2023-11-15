@@ -623,6 +623,10 @@ video {
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
 }
 
+.overflow-hidden {
+  overflow: hidden;
+}
+
 .rounded {
   border-radius: 0.25rem;
 }
@@ -746,6 +750,7 @@ html {
   scroll-behavior: smooth;
   /* Added smooth scrolling behavior */
   cursor:crosshair;
+  overflow-x: hidden;
 }
 
 body {
