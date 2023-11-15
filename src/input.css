@@ -2,23 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-    margin: 0;
-    padding: 0;
-    font-family:sans-serif;
+@font-face {
+    font-family: 'montserratthin_italic';
+    src: url("montserrat-italic-variablefont_wght-webfont.woff2") format("woff2"),
+         url("montserrat-italic-variablefont_wght-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: italic; /* Changed to 'italic' for italic font style */
 }
 
-html, body {
-  overflow-x:hidden;
-  display: block;
-} 
+html {
+    scroll-behavior: smooth; /* Added smooth scrolling behavior */
+    cursor:crosshair;
+}
+
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    font-family: 'montserratthin_italic';
+    overflow-x: hidden;
+    display: block;
+}
+
+/* You can specify specific elements where needed */
+/* For example, if you want a container to use the custom font */
+* {
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+
 
 main {
     width: 100%;
     height: inherit;
     margin: 0 auto;
     display: block;
-    background: linear-gradient(90deg, #020203, #2c2c86);
+    background: linear-gradient(90deg, #d4bfff, #c3c3f0);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     padding: 10% 5% 200px; /* Adjust padding as needed */
     box-sizing: border-box;
@@ -27,13 +52,14 @@ main {
 
 /* Slider Animation */
 .slider-thumb::before {
+    border: #000000;
     position: absolute;
     content: "";
     left: 50%;
     top: 0;
     width: 1200px; /* Increase the width to take up more space */
     height: 1200px; /* Increase the height to take up more space */
-    background: #5514d6;
+    background: #9e9ef2;
     border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
     will-change: border-radius, transform, opacity;
     animation: sliderShape 5s linear infinite;
@@ -63,11 +89,11 @@ main {
 
 h1{
     font-size: inherit;
-    color: #dbc1fc;
+    color: #7f7fff;
     transition: transform 0.3s;
-    text-shadow: 2px 0 transparent, -2px 0 transparent, 0 2px #866bd7, 0 -2px #000000,
-             1px 1px #5113e2, -1px -1px #3a14e4, 1px -1px #4010f0, -1px 1px #050ef9;
-    margin-top: 100px;
+    /*text-shadow: 2px 0 transparent, -2px 0 rgb(255, 255, 255), 0 2px #9e9ef2, 0 -2px #ffffff,
+             1px 1px #cab4ff, -1px -1px #ddd6ff, 1px -1px #d1c5ff, -1px 1px #bdbffa;
+    */margin-top: 100px;
     font-weight: 100;
     font-size: 80px; 
 }
@@ -111,7 +137,13 @@ h6 {
 }
 
 p {
-    color: white;
+    font-size: inherit;
+    color: #7f7fff;
+    transition: transform 0.3s;
+    /*text-shadow: 2px 0 transparent, -2px 0 rgb(255, 255, 255), 0 2px #9e9ef2, 0 -2px #ffffff,
+             1px 1px #cab4ff, -1px -1px #ddd6ff, 1px -1px #d1c5ff, -1px 1px #bdbffa;
+    */
+    font-weight: 100;
 }
 
 .welcome-text {
@@ -145,7 +177,6 @@ main {
 /* Heading Styles */
 .h1 {
     color: black;
-    background-color: rgba(70, 70, 70, 0.8);
     padding: 100px;
 }
 
@@ -166,7 +197,7 @@ h2:hover {
 /* Article Text Styles */
 
 .article-text {
-    background-color: rgba(41, 41, 41, 0.8);
+    background-color:#adadff;
     color: antiquewhite;
     padding: 10px;
     margin-top: 10px;
@@ -181,7 +212,7 @@ h2:hover {
 
 .article-text:hover {
     transform: scale(1.05);
-    background-color: rgba(70, 70, 70, 1);
+    background-color:rgb(135, 0, 253);
     opacity: 100;
 }
 
@@ -206,15 +237,8 @@ h2:hover {
 
 /* Project Container Styles */
 
-#project-rows {
-    background: linear-gradient(270deg, #020203, #2c2c86);
-    color: antiquewhite;
-    height: inherit;
-    margin-top: 50px;
-    padding: 0px;
-}
-
 .flex-row {
+    background-color: #050ef9;
     display: flex;
     flex-direction:column-reverse; /* Set flex direction to column */
     align-items: center; /* Align items at the center horizontally */
@@ -232,6 +256,31 @@ h2:hover {
     align-items: center;
 }
 
+/* Style for the project container */
+.project-row {
+    background: linear-gradient(90deg, #d4bfff, #c3c3f0);
+    border-width: 20px;
+    border-color: #9e9ef2;
+    height: inherit;
+
+    padding: 0px;
+    /* Your styles for the entire container */
+  }
+  
+  /* Style for each individual project block */
+  .project-block {
+  }
+  
+  /* Style for the paragraph inside each project block */
+  .project-block p {
+    /* Your styles for the paragraph text */
+  }
+  
+  /* Style for the images inside each project block */
+  .project-block img {
+    /* Your styles for the images */
+  }
+
 #new {
     background-image: url(Computer.jpg);
     background-size:cover;
@@ -241,8 +290,7 @@ h2:hover {
 
 .forms {
     height: 100%; /* Set the height to 100% */
-    margin: 45px;
-    background: linear-gradient(90deg, #320c99, #000000);
+    background: linear-gradient(90deg, #d4bfff, #c3c3f0);
     display: flex;
     flex-direction: column;
     justify-content: center;
