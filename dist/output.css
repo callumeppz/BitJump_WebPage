@@ -762,6 +762,11 @@ body {
   display: block;
 }
 
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
 /* You can specify specific elements where needed */
 
 /* For example, if you want a container to use the custom font */
