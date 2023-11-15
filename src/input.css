@@ -17,7 +17,7 @@ html {
 }
 
 body {
-    background-color: white;
+    background: linear-gradient(90deg, #d4bfff, #c3c3f0);
     margin: 0;
     padding: 0;
     font-family: 'montserratthin_italic';
@@ -27,9 +27,14 @@ body {
 
   
 .dark-mode {
-    background-color: black;
+    background: linear-gradient(90deg, #161616, rgb(76, 2, 160));
     color: white;
 }
+
+.project-row.dark-mode{
+    background-color: #000000;
+}
+
 
 /* You can specify specific elements where needed */
 /* For example, if you want a container to use the custom font */
@@ -43,15 +48,11 @@ header{
     z-index: 999;
 }
 
-
-
-
 main {
     width: 100%;
     height: inherit;
     margin: 0 auto;
     display: block;
-    background: linear-gradient(90deg, #d4bfff, #c3c3f0);
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     padding: 10% 5% 200px; /* Adjust padding as needed */
     box-sizing: border-box;
@@ -265,7 +266,6 @@ h2:hover {
 
 /* Style for the project container */
 .project-row {
-    background: linear-gradient(90deg, #d4bfff, #c3c3f0);
     border-width: 20px;
     border-color: #9e9ef2;
     height: inherit;
@@ -297,13 +297,13 @@ h2:hover {
 
 .forms {
     height: 100%; /* Set the height to 100% */
-    background: linear-gradient(90deg, #d4bfff, #c3c3f0);
+    width: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     padding-right: 0%;
-    text-align: left;
+    text-align: ;
     padding: 20px 30px;
     /*clip-path: polygon(0% 15%, 100% 2%, 100% 100%, 0% 90%, 0% 20%);*/
 }
