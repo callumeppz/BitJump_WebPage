@@ -1233,6 +1233,29 @@ h2:hover {
   transition: 1.0s;
 }
 
+#menu-products:hover #dropdown-products {
+  display: block;
+  color: white;
+  opacity: 1;
+  /* Adding transition for opacity */
+  background-color: #21213f;
+  margin: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  transition: 1.0s;
+}
+
+label {
+  display: block;
+  background-color: #21213f;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: auto;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
 #dropdown-products {
   display: flex;
   transition: 1.2;
