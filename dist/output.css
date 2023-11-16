@@ -1134,7 +1134,6 @@ h2:hover {
 .TRIAL {
   background-color: #21213f;
   color: white;
-  margin: 10px;
   border-radius: 10px;
   padding: 20px;
   width: auto;
@@ -1143,21 +1142,25 @@ h2:hover {
 .TRIAL1 {
   background-color: #21213f;
   color: white;
-  margin: 10px;
   border-radius: 10px;
   padding: 20px;
   width: auto;
-  margin-top: 20px;
 }
 
 .TRIAL2 {
   background-color: #21213f;
   color: white;
-  margin: 10px;
   border-radius: 10px;
   padding: 20px;
   width: auto;
-  margin-top: 20px;
+}
+
+.TRIAL3 {
+  background-color: #21213f;
+  color: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: auto;
 }
 
 #dropdown-products {
@@ -1174,12 +1177,26 @@ h2:hover {
   display: block;
   color: white;
   opacity: 1;
-  transition: 0.3s;
   /* Adding transition for opacity */
   background-color: #21213f;
   margin: 10px;
   border-radius: 10px;
-  padding: 20px;
+  padding: 10px;
+  transition: 1.0s;
+}
+
+#dropdown-products {
+  display: flex;
+  transition: 1.2;
+}
+
+/* Change the background color on hover */
+
+#menu-products:hover {
+  transition: 1.2s;
+  border: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(34, 24, 103, 0.8) 0 0 4px 4px;
 }
 
 .CVButton {
