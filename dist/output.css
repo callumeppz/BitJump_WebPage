@@ -711,11 +711,6 @@ video {
   line-height: 1rem;
 }
 
-.text-indigo-900 {
-  --tw-text-opacity: 1;
-  color: rgb(49 46 129 / var(--tw-text-opacity));
-}
-
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1022,7 +1017,7 @@ h2:hover {
 
 .article-text {
   background-color:#adadff;
-  color: rgb(66, 3, 255);
+  color: rgb(0, 0, 0);
   padding: 10px;
   margin-top: 10px;
   opacity: 10;
@@ -1118,31 +1113,42 @@ h2:hover {
 }
 
 .Info {
-  flex: 1;
-  /* Allow divs to grow and fill available space */
-  margin: 10px;
-  /* Add margin between the divs */
-  padding: 20px;
-  /* Padding for content */
-  background-color: #adadff;
-  /* Background color */
-  /* Other styling properties for .Info */
+  background-color: #21213f;
+  display: flex;
+  flex-direction:column-reverse;
+  /* Set flex direction to column */
+  align-items: center;
+  /* Align items at the center horizontally */
 }
 
 .info-text-short {
-  background-color:#adadff;
-  color: rgb(66, 3, 255);
-  padding: 10px;
-  margin-top: 10px;
-  opacity: 10;
-  transition: transform 0.3s;
+  border: 10px;
+  border-radius: 10px;
   text-align: center;
-  align-items:center;
-  place-items: center;
+  margin-top: 4px;
+  background-color: #21213f;
+}
+
+.CVButton {
+  margin-top: 10px;
+  padding: 10px;
+  border: 10px;
+  border-radius:10px;
+  background-color: #21213f;
+  transition: 1.2s;
+}
+
+.CVButton:hover {
+  transform: scale(1.1);
+  transition: 1.2s;
+  background-color: #371069;
+  padding: 1.0rem, 1.0rem;
+  /* Adjust the initial and hover padding as needed */
+  box-shadow: rgba(34, 24, 103, 0.8) 0 0 4px 4px;
 }
 
 .CV{
-  background-color:rgb(66, 3, 255);
+  background-color:rgb(197, 191, 255);
   margin-left: 100px;
   padding: 100px;
 }
@@ -1271,10 +1277,6 @@ input[type=email], select, textarea {
 
   .md\:w-1\/2 {
     width: 50%;
-  }
-
-  .md\:w-3\/4 {
-    width: 75%;
   }
 
   .md\:max-w-sm {
