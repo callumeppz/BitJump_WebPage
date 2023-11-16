@@ -538,10 +538,6 @@ video {
   position: relative;
 }
 
-.left-0 {
-  left: 0px;
-}
-
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -549,6 +545,10 @@ video {
 
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .mt-8 {
@@ -569,6 +569,10 @@ video {
 
 .w-full {
   width: 100%;
+}
+
+.max-w-2xl {
+  max-width: 42rem;
 }
 
 .max-w-full {
@@ -670,6 +674,10 @@ video {
   padding: 1rem;
 }
 
+.p-6 {
+  padding: 1.5rem;
+}
+
 .p-8 {
   padding: 2rem;
 }
@@ -703,6 +711,11 @@ video {
   line-height: 1rem;
 }
 
+.text-indigo-900 {
+  --tw-text-opacity: 1;
+  color: rgb(49 46 129 / var(--tw-text-opacity));
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -731,6 +744,10 @@ video {
 
 .duration-300 {
   transition-duration: 300ms;
+}
+
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @font-face {
@@ -1100,6 +1117,36 @@ h2:hover {
   margin-top: 40px;
 }
 
+.Info {
+  flex: 1;
+  /* Allow divs to grow and fill available space */
+  margin: 10px;
+  /* Add margin between the divs */
+  padding: 20px;
+  /* Padding for content */
+  background-color: #adadff;
+  /* Background color */
+  /* Other styling properties for .Info */
+}
+
+.info-text-short {
+  background-color:#adadff;
+  color: rgb(66, 3, 255);
+  padding: 10px;
+  margin-top: 10px;
+  opacity: 10;
+  transition: transform 0.3s;
+  text-align: center;
+  align-items:center;
+  place-items: center;
+}
+
+.CV{
+  background-color:rgb(66, 3, 255);
+  margin-left: 100px;
+  padding: 100px;
+}
+
 .forms {
   height: 100%;
   /* Set the height to 100% */
@@ -1180,10 +1227,6 @@ input[type=email], select, textarea {
     margin-top: 0px;
   }
 
-  .sm\:w-48 {
-    width: 12rem;
-  }
-
   .sm\:flex-row {
     flex-direction: row;
   }
@@ -1230,8 +1273,8 @@ input[type=email], select, textarea {
     width: 50%;
   }
 
-  .md\:w-64 {
-    width: 16rem;
+  .md\:w-3\/4 {
+    width: 75%;
   }
 
   .md\:max-w-sm {
@@ -1298,10 +1341,6 @@ input[type=email], select, textarea {
     width: 33.333333%;
   }
 
-  .lg\:w-96 {
-    width: 24rem;
-  }
-
   .lg\:max-w-md {
     max-width: 28rem;
   }
@@ -1314,10 +1353,6 @@ input[type=email], select, textarea {
 
   .lg\:p-16 {
     padding: 4rem;
-  }
-
-  .lg\:p-24 {
-    padding: 6rem;
   }
 
   .lg\:p-6 {
@@ -1345,10 +1380,6 @@ input[type=email], select, textarea {
 }
 
 @media (min-width: 1280px) {
-  .xl\:w-4\/5 {
-    width: 80%;
-  }
-
   .xl\:text-2xl {
     font-size: 1.5rem;
     line-height: 2rem;
