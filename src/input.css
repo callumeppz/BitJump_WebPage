@@ -187,6 +187,16 @@ h3:hover{
     transform: scale(1.05);
 }
 
+h4{
+    font-size: inherit;
+    color: #2020db;
+    /*text-shadow: 2px 0 transparent, -2px 0 rgb(255, 255, 255), 0 2px #9e9ef2, 0 -2px #ffffff,
+             1px 1px #cab4ff, -1px -1px #ddd6ff, 1px -1px #d1c5ff, -1px 1px #bdbffa;*/
+    font-weight: 100;
+    margin-bottom: 5px;
+    font-size: 30px; 
+}
+
 h6 {
     color: rgb(255, 255, 255);
 }
@@ -235,6 +245,7 @@ h2:hover {
     background-color: rgba(70, 70, 70, 1);
     transition: transform 0.4s;
 }
+
 
 /* Article Text Styles */
 
