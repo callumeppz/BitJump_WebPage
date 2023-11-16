@@ -16,24 +16,48 @@
 
 <body class="bg-gray-900">
 
-    <!-- Header and Tabs -->
-    <header nav class="navbar flex-container p-4 md:p-6 lg:p-8 bg-gray-900">
-        <nav class="nav flex-item text-center space-x-4 sm:space-x-8 md:space-x-10">
-            <a href="index.html">
-            <button class="tablinks bg-gray-900">Home</button>
-            </a>
-            <a href="Project1.html">
-            <button class="tablinks bg-gray-900">Projects</button>
-            </a>
-            <a href="About.html">
-            <button class="tablinks bg-gray-900">About</button>
-            </a>
-            <a class="self-left" target="_blank" href="https://github.com/callumeppz">
-                <button class="tablinks bg-gray-900">GitHub</button>
-            </a>
-        </nav>
-    </header>
+    <body class="overflow-hidden">
+        <header nav class="navbar flex-container p-2 sm:p-3 md:p-4 lg:p-6 bg-gray-900">
+            <nav class="nav flex-item text-center space-x-1 sm:space-x-2 md:space-x-3 lg:space-x-4">
+                <a href="index.html">
+                    <button class="tablinks bg-gray-900 hover:text-purple-900 focus:outline-none focus:shadow-outline-purple transition-transform duration-300 transform active:scale-95 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm">
+                        Home
+                    </button>
+                </a>
+                <a href="Project1.html">
+                    <button class="tablinks bg-gray-900 hover:text-purple-900 focus:outline-none focus:shadow-outline-purple transition-transform duration-300 transform active:scale-95 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm">
+                        Projects
+                    </button>
+                </a>
+                <a href="About.html">
+                    <button class="tablinks bg-gray-900 hover:text-purple-900 focus:outline-none focus:shadow-outline-purple transition-transform duration-300 transform active:scale-95 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm">
+                        About
+                    </button>
+                </a>
+                <a href="ContactME.html">
+                    <button class="tablinks bg-gray-900 hover:text-purple-900 focus:outline-none focus:shadow-outline-purple transition-transform duration-300 transform active:scale-95 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm">
+                        Contact Me
+                    </button>
+                </a>
+                <a class="self-left" target="_blank" href="https://github.com/callumeppz">
+                    <button class="tablinks bg-gray-900 hover:text-purple-900 focus:outline-none focus:shadow-outline-purple transition-transform duration-300 transform active:scale-95 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm">
+                        GitHub
+                    </button>
+                </a>
+                <label class="switch te">
+                    <input id="darkModeToggle" class="darkmode" onclick="toggleDarkMode()">
+                    <span class="slider round"></span>
+                  </label>
+            </nav>
+        </header>
 
+        <script>
+            function toggleDarkMode() {
+            const body = document.querySelector('body');
+            body.classList.toggle('dark-mode');
+            }
+        </script>
+        
     <!-- Contact Form -->
     <form class="forms mt-8 space-y-4 rounded-md">
         <h3 class="text-3xl  text-white">Contact Me</h3>
