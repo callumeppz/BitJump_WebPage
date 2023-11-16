@@ -358,6 +358,7 @@ h2:hover {
 
 .TRIAL {
     background-color: #21213f;
+    color: white;
     margin: 10px;
     border-radius: 10px;
     padding: 20px;
@@ -366,6 +367,7 @@ h2:hover {
   
 .TRIAL1 {
     background-color: #21213f;
+    color: white;
     margin: 10px;
     border-radius: 10px;
     padding: 20px;
@@ -374,6 +376,7 @@ h2:hover {
 }
 .TRIAL2 {
     background-color: #21213f;
+    color: white;
     margin: 10px;
     border-radius: 10px;
     padding: 20px;
@@ -383,6 +386,7 @@ h2:hover {
 
 #dropdown-products {
     display: none;
+    color: white;
     background-color: #21213f;
     transition: opacity 0.3s ease-in-out; /* Adding transition for opacity */
     opacity: 0; /* Initially set opacity to 0 */
@@ -390,8 +394,9 @@ h2:hover {
   
 #menu-products:hover #dropdown-products {
     display: block;
-    opacity: 1; /* When hovering, change opacity to 1 for a smooth transition */
-    transition: opacity 0.3s ease-in-out; /* Adding transition for opacity */
+    color: white;
+    opacity: 1; 
+    transition: 0.3s; /* Adding transition for opacity */
     background-color: #21213f;
     margin: 10px;
     border-radius: 10px;
