@@ -1,5 +1,12 @@
-$(document).ready(function(){
-    $('.menu-products').on('click', function(){
-        $(this).find('.dropdown-products').toggle();
-    });
-});
+if ("ontouchstart" in document.documentElement) {
+    document.documentElement.className += " touch";
+    console.log("   supports touch");
+  } else {
+    console.log("   does NOT support touch");
+  }
+  
+  
+  
+  $('.touch .container').each(function() {
+    $('*').not(this).on('mouseover', function() {});
+  });

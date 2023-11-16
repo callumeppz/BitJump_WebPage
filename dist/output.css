@@ -534,6 +534,40 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
+
 .relative {
   position: relative;
 }
@@ -557,6 +591,10 @@ video {
 
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .h-0 {
@@ -1183,7 +1221,7 @@ h2:hover {
   /* Initially set opacity to 0 */
 }
 
-#menu-products:hover #dropdown-products {
+#dd:checked ~ #dropdown-products{
   display: block;
   color: white;
   opacity: 1;
@@ -1202,7 +1240,7 @@ h2:hover {
 
 /* Change the background color on hover */
 
-#menu-products:hover {
+#menu-products:hover .ClickQuery, #menu-products .ClickQuery:hover {
   transition: 1.2s;
   border: 10px;
   border-radius: 10px;

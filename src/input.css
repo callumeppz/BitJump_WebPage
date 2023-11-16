@@ -413,7 +413,7 @@ h2:hover {
     opacity: 0; /* Initially set opacity to 0 */
   }
   
-#menu-products:hover #dropdown-products {
+  #dd:checked ~ #dropdown-products{
     display: block;
     color: white;
     opacity: 1; 
@@ -423,7 +423,8 @@ h2:hover {
     border-radius: 10px;
     padding: 10px;
     transition: 1.0s;
-}
+  }
+  
 
 #dropdown-products {
     display: flex;
@@ -431,7 +432,7 @@ h2:hover {
 }
 
 /* Change the background color on hover */
-#menu-products:hover {
+#menu-products:hover .ClickQuery, #menu-products .ClickQuery:hover {
     transition: 1.2s;
     border: 10px;
     border-radius: 10px;
