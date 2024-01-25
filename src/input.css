@@ -20,8 +20,9 @@ body * {
 }
 
 :where(body) {
-    --background-color: #FFF;
-    --text-color: #190094;
+    --background-color: #ceabff;
+    --text-color: #000000;
+    color-scheme: light;
   }
   
   @media (prefers-color-scheme: dark) {
