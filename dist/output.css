@@ -714,19 +714,14 @@ video {
   background-color: rgb(30 58 138 / var(--tw-bg-opacity));
 }
 
-.bg-blue-950 {
+.bg-gray-800 {
   --tw-bg-opacity: 1;
-  background-color: rgb(23 37 84 / var(--tw-bg-opacity));
+  background-color: rgb(31 41 55 / var(--tw-bg-opacity));
 }
 
 .bg-gray-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-}
-
-.bg-purple-500 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(168 85 247 / var(--tw-bg-opacity));
 }
 
 .bg-white {
@@ -1121,7 +1116,7 @@ h2:hover {
 /* Article Text Styles */
 
 .article-text {
-  background-color:#adadff;
+  background-color: rgb(17 24 39);
   border: 10px;
   border-radius:10px;
   padding: 10px;
@@ -1195,23 +1190,6 @@ h2:hover {
   /* Your styles for the entire container */
 }
 
-/* Style for each individual project block */
-
-.project-block {
-}
-
-/* Style for the paragraph inside each project block */
-
-.project-block p {
-  /* Your styles for the paragraph text */
-}
-
-/* Style for the images inside each project block */
-
-.project-block img {
-  /* Your styles for the images */
-}
-
 #new {
   background-image: url(Computer.jpg);
   background-size:cover;
@@ -1220,7 +1198,7 @@ h2:hover {
 }
 
 .Info {
-  background-color: #21213f;
+  background-color: rgb(17 24 39);
   display: flex;
   flex-direction:column-reverse;
   /* Set flex direction to column */
@@ -1372,7 +1350,7 @@ input[type=email], select, textarea {
   /* Center vertically and horizontally */
   padding: 10px;
   font-size: 20px;
-  background-color: rgb(20, 18, 32);
+  background-color: rgb(17 24 39);
 }
 
 .hover\:bg-purple-700:hover {
