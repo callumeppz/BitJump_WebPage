@@ -88,13 +88,14 @@
                         </div>
             
 
-                        <div class="flex flex-col text-center p-8 md:w-1/2 lg:w-2/3">
+                        <div class="flex flex-col text-center md:w-1/2 lg:w-2/3">
                             <script src="ClickQuery.js"></script>
                             <script>$(document).ready(function(){
                                 $('.menu-products').on('click', function(){
                                     $(this).find('.dropdown-products').toggle();
                                 });
-                            });</script>
+                            });
+                            </script>
                                 <h4>Experience</h4>
                                 <ul>
                                     <li id="menu-products">
@@ -134,9 +135,11 @@
                                 </li>
                             </ul>
                         </div>
-                    </div>                        
+                    </div>          
+                    
+                    
                 <!-- Project Container -->
-                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 px-2">
+                <div class="grid grid-cols-1 px-4; md:grid-cols-2 lg:grid-cols-4 gap-2 px-4">
                     <!-- Project Card 1 -->
                     <div class="bg-blue-950 rounded-lg overflow-hidden shadow-md w-90">
                         <img class="w-full h-auto" src="mazegame.png" alt="Random Maze Game">
@@ -177,33 +180,7 @@
                         </div>
                     </div>
 
-                    <!-- Duplicate and adjust for Card 5 -->
-                    <div class="bg-blue-950 rounded-lg overflow-hidden shadow-md">
-                        <img class="w-full h-auto" src="mazegame.png" alt="New Project 5">
-                        <div class="p-6">
-                            <p class="font-bold text-xl mb-2">New Project 5</p>
-                            <p class=" text-base">Description for the new project.</p>
-                            <a href="Project5.html" class="block mt-4 bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">View Project</a>
-                        </div>
-                    </div>
-
-                    <!-- Duplicate and adjust for Card 6 -->
-                    <div class="bg-blue-950 rounded-lg overflow-hidden shadow-md">
-                        <img class="w-full h-auto" src="mazegame.png" alt="New Project 6">
-                        <div class="p-6">
-                            <p class="font-bold text-xl mb-2">New Project 6</p>
-                            <p class=" text-base">Description for the new project.</p>
-                            <a href="Project6.html" class="block mt-4 bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">View Project</a>
-                        </div>
-                    </div>
                 </div>
-
-        
-
-
-        
-
-            
 
     <!-- Footer for Social Links -->
     <footer class="mt-8">
