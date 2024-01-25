@@ -202,7 +202,7 @@ h3:hover{
 
 h4{
     font-size: inherit;
-    color: #2020db;
+
     /*text-shadow: 2px 0 transparent, -2px 0 rgb(255, 255, 255), 0 2px #9e9ef2, 0 -2px #ffffff,
              1px 1px #cab4ff, -1px -1px #ddd6ff, 1px -1px #d1c5ff, -1px 1px #bdbffa;*/
     font-weight: 100;
@@ -377,80 +377,42 @@ h2:hover {
     background-color: #21213f;
 }
 
-.TRIAL {
-    background-color: #21213f;
-
-
-    border-radius: 10px;
-    padding: 20px;
-    width: auto;
-  }
-  
-.TRIAL1 {
-    background-color: #21213f;
-   
-
-    border-radius: 10px;
-    padding: 20px;
-    width: auto;
-
-}
-.TRIAL2 {
-    background-color: #21213f;
-
-
-    border-radius: 10px;
-    padding: 20px;
-    width: auto;
-
-}
-
+/* Common styles for TRIAL classes */
+.TRIAL,
+.TRIAL1,
+.TRIAL2,
 .TRIAL3 {
     background-color: #21213f;
-
-
-    border-radius: 10px;
-    padding: 20px;
+    border-radius: 20px;
+    border-color: #9e9ef2;
     width: auto;
-
+    justify-content: center;
+    align-self: center;
 }
 
+/* Dropdown styles */
 #dropdown-products {
     display: none;
-  
     background-color: #21213f;
-    transition: opacity 0.3s ease-in-out; /* Adding transition for opacity */
-    opacity: 0; /* Initially set opacity to 0 */
-  }
-  
-  #dd:checked ~ #dropdown-products{
-    display: block;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 0;
+}
 
-    opacity: 1; 
-    transition: 0.3s; /* Adding transition for opacity */
-    background-color: #21213f;
-    margin: 10px;
-    border-radius: 10px;
-    padding: 10px;
-    transition: 1.0s;
-  }
-  
+#menu-products:checked #dropdown-products,
 #menu-products:hover #dropdown-products {
     display: block;
-
     opacity: 1; 
     transition: 0.3s; /* Adding transition for opacity */
     background-color: #21213f;
     margin: 10px;
     border-radius: 10px;
-    padding: 10px;
     transition: 1.0s;
 }
+
 
 label {
     display: block;
     background-color: #21213f;
-
     border-radius: 10px;
     padding: 20px;
     width: auto;
@@ -464,12 +426,6 @@ label {
 }
 
 /* Change the background color on hover */
-#menu-products:hover .ClickQuery, #menu-products .ClickQuery:hover {
-    transition: 1.2s;
-    border: 10px;
-    border-radius: 10px;
-    box-shadow: rgba(34, 24, 103, 0.8) 0 0 4px 4px;
-}
 
 .CVButton {
     margin-top: 10px;
