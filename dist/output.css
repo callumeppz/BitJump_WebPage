@@ -577,6 +577,10 @@ video {
   margin-bottom: 1rem;
 }
 
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -723,6 +727,11 @@ video {
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-purple-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(233 213 255 / var(--tw-bg-opacity));
 }
 
 .p-2 {
@@ -913,20 +922,6 @@ body {
 
 /* The slider */
 
-.slider {
-  position: absolute;
-  cursor: pointer;
-  height: 30px;
-  width: 30px;
-  left: 4px;
-  bottom: 4px;
-  background-image: url("placeholdermoon.png");
-  background-color: rgba(255, 255, 255, 0.116);
-  background-size: cover;
-  /* Adjust as needed */
-  transition:  .6s;
-}
-
 .dark-mode .slider {
   background-image: url("sun.png");
 }
@@ -961,6 +956,20 @@ main {
   position: relative;
 }
 
+.slider {
+  position: absolute;
+  cursor: pointer;
+  height: 20px;
+  width: 30px;
+  left: 4px;
+  bottom: 4px;
+  background-image: url("placeholdermoon.png");
+  background-color: rgba(255, 255, 255, 0.116);
+  background-size: cover;
+  /* Adjust as needed */
+  transition:  .6s;
+}
+
 /* Slider Animation */
 
 .slider-thumb::before {
@@ -971,7 +980,7 @@ main {
   left: 50%;
   top: 0;
   width: 1200px;
-  height: 1200px;
+  height: 900px;
   background: #9e9ef2;
   border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
   will-change: border-radius, transform, opacity;
@@ -1184,7 +1193,7 @@ h2:hover {
 }
 
 .Info {
-  background-color: rgb(17 24 39);
+  background-color: hsl(231, 25%, 16%);
   display: flex;
   flex-direction:column-reverse;
   /* Set flex direction to column */
@@ -1197,7 +1206,7 @@ h2:hover {
   border-radius: 10px;
   text-align: center;
   margin-top: 4px;
-  background-color: rgb(17 24 39);
+  background-color: hsl(231, 25%, 16%);
 }
 
 .info-text-long {
@@ -1205,7 +1214,7 @@ h2:hover {
   border: 10px;
   border-radius: 10px;
   margin-top: 4px;
-  background-color: rgb(17 24 39);
+  background-color: hsl(231, 25%, 16%);
 }
 
 /* Common styles for TRIAL classes */
@@ -1214,7 +1223,7 @@ h2:hover {
 .TRIAL1,
 .TRIAL2,
 .TRIAL3 {
-  background-color: rgb(17 24 39);
+  background-color: hsl(231, 25%, 16%);
   border-radius: 20px;
   border-color: #9e9ef2;
   width: auto;
@@ -1226,7 +1235,7 @@ h2:hover {
 
 #dropdown-products {
   display: none;
-  background-color: rgb(17 24 39);
+  background-color: hsl(231, 25%, 16%);
   transition: opacity 0.3s ease-in-out;
   opacity: 0;
 }
@@ -1267,7 +1276,7 @@ label {
   padding-left: 100px;
   border: 10px;
   border-radius:10px;
-  background-color: rgb(17 24 39);
+  background-color: hsl(231, 25%, 16%);
   transition: 1.2s;
 }
 
@@ -1347,6 +1356,16 @@ input[type=email], select, textarea {
 .hover\:text-purple-900:hover {
   --tw-text-opacity: 1;
   color: rgb(88 28 135 / var(--tw-text-opacity));
+}
+
+.hover\:text-purple-200:hover {
+  --tw-text-opacity: 1;
+  color: rgb(233 213 255 / var(--tw-text-opacity));
+}
+
+.hover\:text-purple-300:hover {
+  --tw-text-opacity: 1;
+  color: rgb(216 180 254 / var(--tw-text-opacity));
 }
 
 .hover\:grayscale-0:hover {

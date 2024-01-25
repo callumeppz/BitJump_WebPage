@@ -73,19 +73,7 @@ body * {
 }
 
 /* The slider */
-.slider {
-    position: absolute;
-    cursor: pointer;
-    height: 30px;
-    width: 30px;
-    left: 4px;
-    bottom: 4px;
-    background-image: url("placeholdermoon.png");
-    background-color: rgba(255, 255, 255, 0.116);
-    background-size: cover; /* Adjust as needed */
-    -webkit-transition: .4s;
-    transition:  .6s;
-  }
+
   
   .dark-mode .slider {
     background-image: url("sun.png");
@@ -118,6 +106,20 @@ main {
     position: relative;
 }
 
+.slider {
+    position: absolute;
+    cursor: pointer;
+    height: 20px;
+    width: 30px;
+    left: 4px;
+    bottom: 4px;
+    background-image: url("placeholdermoon.png");
+    background-color: rgba(255, 255, 255, 0.116);
+    background-size: cover; /* Adjust as needed */
+    -webkit-transition: .4s;
+    transition:  .6s;
+  }
+
 /* Slider Animation */
 .slider-thumb::before {
     border: 8px solid #ceabff; /* Added style ('solid') and color ('#000000') */
@@ -126,7 +128,7 @@ main {
     left: 50%;
     top: 0;
     width: 1200px;
-    height: 1200px;
+    height: 900px;
     background: #9e9ef2;
     border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
     will-change: border-radius, transform, opacity;
@@ -153,6 +155,9 @@ main {
         transform: translate3d(0, -3px, 0) rotateZ(0.01deg);
     }
 }
+
+
+
 
 h1{
     font-size: inherit;
@@ -210,7 +215,6 @@ h4{
 
 p {
     font-size: inherit;
-
     transition: 0.3s;
     /*text-shadow: 2px 0 transparent, -2px 0 rgb(255, 255, 255), 0 2px #9e9ef2, 0 -2px #ffffff,
              1px 1px #cab4ff, -1px -1px #ddd6ff, 1px -1px #d1c5ff, -1px 1px #bdbffa;
@@ -332,7 +336,7 @@ h2:hover {
 }
 
 .Info {
-    background-color: rgb(17 24 39);
+    background-color: hsl(231, 25%, 16%);
     display: flex;
     flex-direction:column-reverse; /* Set flex direction to column */
     align-items: center; /* Align items at the center horizontally */
@@ -343,7 +347,7 @@ h2:hover {
     border-radius: 10px;
     text-align: center;
     margin-top: 4px;
-    background-color: rgb(17 24 39);
+    background-color: hsl(231, 25%, 16%);
 }
 
 .info-text-long {
@@ -351,7 +355,7 @@ h2:hover {
     border: 10px;
     border-radius: 10px;
     margin-top: 4px;
-    background-color: rgb(17 24 39);
+    background-color: hsl(231, 25%, 16%);
 }
 
 /* Common styles for TRIAL classes */
@@ -359,7 +363,7 @@ h2:hover {
 .TRIAL1,
 .TRIAL2,
 .TRIAL3 {
-    background-color: rgb(17 24 39);
+    background-color: hsl(231, 25%, 16%);
     border-radius: 20px;
     border-color: #9e9ef2;
     width: auto;
@@ -370,7 +374,7 @@ h2:hover {
 /* Dropdown styles */
 #dropdown-products {
     display: none;
-    background-color: rgb(17 24 39);
+    background-color: hsl(231, 25%, 16%);
     transition: opacity 0.3s ease-in-out;
     opacity: 0;
 }
@@ -412,7 +416,7 @@ label {
     padding-left: 100px;
     border: 10px;
     border-radius:10px;
-    background-color: rgb(17 24 39);
+    background-color: hsl(231, 25%, 16%);
     transition: 1.2s;
 }
 
