@@ -122,13 +122,13 @@ main {
 
 /* Slider Animation */
 .slider-thumb::before {
-    border: 8px solid #ceabff; /* Added style ('solid') and color ('#000000') */
+    border: 8px solid rgb(17 24 39);; /* Added style ('solid') and color ('#000000') */
     position: absolute;
     content: "";
     left: 50%;
     top: 0;
     width: 1200px;
-    height: 900px;
+    height: 1200px;
     background: #9e9ef2;
     border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
     will-change: border-radius, transform, opacity;

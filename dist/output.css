@@ -729,11 +729,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-purple-200 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(233 213 255 / var(--tw-bg-opacity));
-}
-
 .p-2 {
   padding: 0.5rem;
 }
@@ -973,14 +968,13 @@ main {
 /* Slider Animation */
 
 .slider-thumb::before {
-  border: 8px solid #ceabff;
-  /* Added style ('solid') and color ('#000000') */
+  border: 8px solid rgb(17 24 39);; /* Added style ('solid') and color ('#000000') */
   position: absolute;
   content: "";
   left: 50%;
   top: 0;
   width: 1200px;
-  height: 900px;
+  height: 1200px;
   background: #9e9ef2;
   border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
   will-change: border-radius, transform, opacity;
@@ -1353,19 +1347,14 @@ input[type=email], select, textarea {
   background-color: rgb(126 34 206 / var(--tw-bg-opacity));
 }
 
-.hover\:text-purple-900:hover {
-  --tw-text-opacity: 1;
-  color: rgb(88 28 135 / var(--tw-text-opacity));
-}
-
-.hover\:text-purple-200:hover {
-  --tw-text-opacity: 1;
-  color: rgb(233 213 255 / var(--tw-text-opacity));
-}
-
 .hover\:text-purple-300:hover {
   --tw-text-opacity: 1;
   color: rgb(216 180 254 / var(--tw-text-opacity));
+}
+
+.hover\:text-purple-900:hover {
+  --tw-text-opacity: 1;
+  color: rgb(88 28 135 / var(--tw-text-opacity));
 }
 
 .hover\:grayscale-0:hover {
