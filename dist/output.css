@@ -1197,7 +1197,7 @@ h2:hover {
   border-radius: 10px;
   text-align: center;
   margin-top: 4px;
-  background-color: #21213f;
+  background-color: rgb(17 24 39);
 }
 
 .info-text-long {
@@ -1205,7 +1205,7 @@ h2:hover {
   border: 10px;
   border-radius: 10px;
   margin-top: 4px;
-  background-color: #21213f;
+  background-color: rgb(17 24 39);
 }
 
 /* Common styles for TRIAL classes */
@@ -1214,7 +1214,7 @@ h2:hover {
 .TRIAL1,
 .TRIAL2,
 .TRIAL3 {
-  background-color: #21213f;
+  background-color: rgb(17 24 39);
   border-radius: 20px;
   border-color: #9e9ef2;
   width: auto;
@@ -1226,7 +1226,7 @@ h2:hover {
 
 #dropdown-products {
   display: none;
-  background-color: #21213f;
+  background-color: rgb(17 24 39);
   transition: opacity 0.3s ease-in-out;
   opacity: 0;
 }
@@ -1236,7 +1236,7 @@ h2:hover {
   display: block;
   opacity: 1;
   /* Adding transition for opacity */
-  background-color: #21213f;
+  background-color: rgb(17 24 39);
   margin: 10px;
   border-radius: 10px;
   transition: 1.0s;
@@ -1244,7 +1244,7 @@ h2:hover {
 
 label {
   display: block;
-  background-color: #21213f;
+  background-color: rgb(17 24 39);
   border-radius: 10px;
   padding: 20px;
   width: auto;
@@ -1267,17 +1267,17 @@ label {
   padding-left: 100px;
   border: 10px;
   border-radius:10px;
-  background-color: #21213f;
+  background-color: rgb(17 24 39);
   transition: 1.2s;
 }
 
 .CVButton:hover {
   transform: scale(1.1);
   transition: 1.2s;
-  background-color: #371069;
+  background-color: rgb(17 24 39);
   padding: 1.0rem, 1.0rem;
   /* Adjust the initial and hover padding as needed */
-  box-shadow: rgba(34, 24, 103, 0.8) 0 0 4px 4px;
+  background-color: rgb(118, 10, 233);
 }
 
 .CV{
