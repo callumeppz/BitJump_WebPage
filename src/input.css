@@ -12,7 +12,6 @@
 
 html {
     scroll-behavior: smooth; /* Added smooth scrolling behavior */
-    cursor:crosshair;
     overflow-x: hidden;
 }
 
@@ -270,7 +269,6 @@ h2:hover {
 
 .article-text:hover {
     transition: 1.2s;
- 
     transform: scale(1.05);
     background-color:rgb(0, 0, 0);
     opacity: 100;
