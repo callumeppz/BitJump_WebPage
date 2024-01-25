@@ -20,20 +20,33 @@ body * {
     @apply transition-colors duration-200;
 }
 
-body {
-    background: linear-gradient(90deg, #d4bfff, #c3c3f0);
+:where(body) {
+    --background-color: #FFF;
+    --text-color: #190094;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    :where(body) {
+      --background-color: hsl(231, 25%, 16%);
+      --text-color: #c7bcfe;
+    }
+  }
+  
+  body {
+    background-color: var(--background-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
     font-family: 'montserratthin_italic';
     overflow-x: hidden;
     display: block;
-    
-}
+  }
+  
 
   
 .dark-mode {
     background: linear-gradient(90deg, #161616, rgb(25, 25, 26));
-    color: white;
+
 }
 
 .project-row.dark-mode{
@@ -107,13 +120,13 @@ main {
 
 /* Slider Animation */
 .slider-thumb::before {
-    border: #000000;
+    border: 8px solid #ceabff; /* Added style ('solid') and color ('#000000') */
     position: absolute;
     content: "";
     left: 50%;
     top: 0;
-    width: 1200px; /* Increase the width to take up more space */
-    height: 1200px; /* Increase the height to take up more space */
+    width: 1200px;
+    height: 1200px;
     background: #9e9ef2;
     border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
     will-change: border-radius, transform, opacity;
@@ -122,7 +135,6 @@ main {
     z-index: -1;
     -webkit-animation: sliderShape 5s linear infinite;
 }
-
 
 @keyframes sliderShape {
     0%, 100% {
@@ -142,9 +154,11 @@ main {
     }
 }
 
+
+
 h1{
     font-size: inherit;
-    color: #2020db;
+
     transition: transform 0.3s;
     /*text-shadow: 2px 0 transparent, -2px 0 rgb(255, 255, 255), 0 2px #9e9ef2, 0 -2px #ffffff,
              1px 1px #cab4ff, -1px -1px #ddd6ff, 1px -1px #d1c5ff, -1px 1px #bdbffa;
@@ -173,10 +187,9 @@ h2:hover{
 
 h3{
     font-size: 40PX;
-    color: #7615ff;
+ 
     transition: transform 0.3s;
-    text-shadow: 2px 0 transparent, -2px 0 transparent, 0 2px #866bd7, 0 -2px #000000,
-             1px 1px #5113e2, -1px -1px #3a14e4, 1px -1px #4010f0, -1px 1px #050ef9;
+
     margin-top: 100px;
     font-weight: 100;
     font-size: 80px; 
@@ -197,13 +210,10 @@ h4{
     font-size: 30px; 
 }
 
-h6 {
-    color: rgb(255, 255, 255);
-}
 
 p {
     font-size: inherit;
-    color: rgb(61, 38, 214);
+
     transition: 0.3s;
     /*text-shadow: 2px 0 transparent, -2px 0 rgb(255, 255, 255), 0 2px #9e9ef2, 0 -2px #ffffff,
              1px 1px #cab4ff, -1px -1px #ddd6ff, 1px -1px #d1c5ff, -1px 1px #bdbffa;
@@ -228,19 +238,19 @@ p {
 /* changes
 /* Heading Styles */
 .h1 {
-    color: black;
+
     padding: 100px;
 }
 
 h2 {
-    color: black;
+
     background-color: rgba(70, 70, 70, 0.8);
     padding: 100px;
     background-image: url(/Images/Computer.jpg);
 }
 
 h2:hover {
-    color: black;
+
     transform: scale(1.05);
     background-color: rgba(70, 70, 70, 1);
     transition: transform 0.4s;
@@ -253,7 +263,7 @@ h2:hover {
     background-color:#adadff;
     border: 10px;
     border-radius:10px;
-    color: rgb(0, 0, 0);
+
     padding: 10px;
     margin-top: 10px;
     opacity: 10;
@@ -265,7 +275,7 @@ h2:hover {
 
 .article-text:hover {
     transition: 1.2s;
-    color: #050ef9;
+ 
     transform: scale(1.05);
     background-color:rgb(0, 0, 0);
     opacity: 100;
@@ -285,7 +295,7 @@ h2:hover {
 }
 
 .tablinks:hover {
-    color: #320c99;
+
     letter-spacing: 0.2rem;
     padding: 1.1rem 1.1rem; /* Adjust the initial and hover padding as needed */
     box-shadow: 0 0 35px var(--clr);
@@ -369,7 +379,7 @@ h2:hover {
 
 .TRIAL {
     background-color: #21213f;
-    color: white;
+
 
     border-radius: 10px;
     padding: 20px;
@@ -378,7 +388,7 @@ h2:hover {
   
 .TRIAL1 {
     background-color: #21213f;
-    color: white;
+   
 
     border-radius: 10px;
     padding: 20px;
@@ -387,7 +397,7 @@ h2:hover {
 }
 .TRIAL2 {
     background-color: #21213f;
-    color: white;
+
 
     border-radius: 10px;
     padding: 20px;
@@ -397,7 +407,7 @@ h2:hover {
 
 .TRIAL3 {
     background-color: #21213f;
-    color: white;
+
 
     border-radius: 10px;
     padding: 20px;
@@ -407,7 +417,7 @@ h2:hover {
 
 #dropdown-products {
     display: none;
-    color: white;
+  
     background-color: #21213f;
     transition: opacity 0.3s ease-in-out; /* Adding transition for opacity */
     opacity: 0; /* Initially set opacity to 0 */
@@ -415,7 +425,7 @@ h2:hover {
   
   #dd:checked ~ #dropdown-products{
     display: block;
-    color: white;
+
     opacity: 1; 
     transition: 0.3s; /* Adding transition for opacity */
     background-color: #21213f;
@@ -427,7 +437,7 @@ h2:hover {
   
 #menu-products:hover #dropdown-products {
     display: block;
-    color: white;
+
     opacity: 1; 
     transition: 0.3s; /* Adding transition for opacity */
     background-color: #21213f;
@@ -440,7 +450,7 @@ h2:hover {
 label {
     display: block;
     background-color: #21213f;
-    color: white;
+
     border-radius: 10px;
     padding: 20px;
     width: auto;
@@ -534,7 +544,6 @@ input[type=email], select, textarea {
     justify-content: center;
     align-items: center; /* Center vertically and horizontally */
     padding: 10px;
-    color: rgb(230, 230, 230);
     font-size: 20px;
-    background-color: rgb(19, 19, 19);
+    background-color: rgb(20, 18, 32);
 }

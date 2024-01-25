@@ -9,11 +9,9 @@
     <meta name="robots" content="index, follow">
     <link rel="icon" href="dist/github.png">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="output.css">
     <link rel="stylesheet" href="input.css">
-
+    <link rel="stylesheet" href="output.css">
 </head>
-
 
 
 <body class="overflow-hidden">
@@ -23,7 +21,7 @@
             <a href="index.html">
                 <button class="tablinks bg-gray-900 hover:text-purple-900 focus:outline-none focus:shadow-outline-purple transition-transform duration-300 transform active:scale-95 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm">
                     Home
-                </button>
+            </button>
             </a>
             <a href="Project1.html">
                 <button class="tablinks bg-gray-900 hover:text-purple-900 focus:outline-none focus:shadow-outline-purple transition-transform duration-300 transform active:scale-95 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm">
@@ -77,20 +75,20 @@
                 <!-- Project Container -->
                 <div class="Info-container">
                     <div class="description flex flex-col space-y-8 md:space-y-0 md:flex-row rounded">
-                        <div class="flex flex-col justify-center items-center p-8 border md:w-1/2 lg:w-1/3">
+                        <div class="flex flex-col justify-center items-center p-8 md:w-1/2 lg:w-1/3">
                             <!-- Content for the first column -->
-                            <p class="info-text-short text-white max-w-2xl bg-adadff p-6 mt-6 transition-transform duration-300 ease-in-out text-center">
+                            <p class="info-text-short max-w-2xl bg-adadff p-6 mt-6 transition-transform duration-300 ease-in-out text-center">
                                 I'm a passionate Third-Year Computer Science student <br>enrolled at the University of Reading. <br>My journey in this dynamic field has 
                                 equipped me with a diverse skill set that includes <br>proficiency in several programming languages such as Java, C, Python, JavaScript, and HTML/CSS. <br>
                                 For a comprehensive overview of my academic background, skills, and experiences, <br>please explore my About Me Page.
                             </p>
-                            <button class="CVButton text-white">
+                            <button class="CVButton">
                                 <a class="About Me" href="About.html">About Me</a>
                             </button>
                         </div>
             
 
-                        <div class="flex flex-col text-center p-8 border md:w-1/2 lg:w-2/3">
+                        <div class="flex flex-col text-center p-8 md:w-1/2 lg:w-2/3">
                             <script src="ClickQuery.js"></script>
                             <script>$(document).ready(function(){
                                 $('.menu-products').on('click', function(){
@@ -137,30 +135,71 @@
                             </ul>
                         </div>
                     </div>                        
+                <!-- Project Container -->
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 px-2">
+                    <!-- Project Card 1 -->
+                    <div class="bg-blue-950 rounded-lg overflow-hidden shadow-md w-90">
+                        <img class="w-full h-auto" src="mazegame.png" alt="Random Maze Game">
+                        <div class="p-4">
+                            <p class="font-bold text-lg mb-2">Random Maze Game</p>
+                            <p class=" text-sm">This involved me creating a randomly generating algorithm that ensured that there was always an exit, this was also my second Java coursework.</p>
+                            <a href="Project1.html" class="block mt-2 bg-purple-500 hover:bg-purple-700 text-white font-bold py-1 px-2 rounded">View Project</a>
+                        </div>
+                    </div>
 
-        <!-- Project Container -->
-        <div class="description flex flex-col space-y-8 md:space-y-0 md:flex-row rounded">
-            <div class="flex flex-col justify-center items-center p-8 border md:w-1/2 lg:w-1/3">
-                <p class="article-text text-center">Random Maze Game <br><br>This involved me creating a randomly generating algorithm that ensured that there was always an exit, this was also my second Java coursework</p>
-                <a href="Project1.html" class="relative w-full max-w-xs md:max-w-sm lg:max-w-md transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
-                    <img class="w-full h-auto rounded-lg p-4 md:p-8 lg:p-16" src="mazegame.png" alt="image description">
-                </a>
-            </div>
-    
-            <div class="flex flex-col justify-center items-center p-8 border md:w-1/2 lg:w-1/3">
-                <p class="article-text text-center">Drone Simulation Game <br><br>This project was my first Java coursework in year 2 of university, which involved me having to create a system that simulated randomly moving, colliding drones.</p>
-                <a href="Project2.html" class="relative w-full max-w-xs md:max-w-sm lg:max-w-md transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
-                    <img class="w-full h-auto rounded-lg p-4 md:p-8 lg:p-16" src="droneimg.png" alt="image description">
-                </a>
-            </div>
-    
-            <div class="flex flex-col justify-center items-center p-8 border md:w-1/2 lg:w-1/3">
-                <p class="article-text text-center">PlaceHolder Text <br><br>This involved me creating a randomly generating algorithm that ensured that there was always an exit, this was also my second Java coursework</p>
-                <a href="Project2.html" class="relative w-full max-w-xs md:max-w-sm lg:max-w-md transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
-                    <img class="w-full h-auto rounded-lg p-4 md:p-8 lg:p-16" src="mazegame.png" alt="image description">
-                </a>
-            </div>
-        </div>
+                    <!-- Project Card 2 -->
+                    <div class="bg-blue-950 rounded-lg overflow-hidden shadow-md">
+                        <img class="w-full h-auto" src="mazegame.png" alt="Drone Simulation Game">
+                        <div class="p-6">
+                            <p class="font-bold text-xl mb-2">Drone Simulation Game</p>
+                            <p class=" text-base">This project was my first Java coursework in year 2 of university, which involved me having to create a system that simulated randomly moving, colliding drones.</p>
+                            <a href="Project2.html" class="block mt-4 bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">View Project</a>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="bg-blue-950 rounded-lg overflow-hidden shadow-md">
+                        <img class="w-full h-auto" src="mazegame.png" alt="Placeholder Text">
+                        <div class="p-6">
+                            <p class="font-bold text-xl mb-2">Placeholder Text</p>
+                            <p class=" text-base">This involved me creating a randomly generating algorithm that ensured that there was always an exit, this was also my second Java coursework.</p>
+                            <a href="Project3.html" class="block mt-4 bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">View Project</a>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate and adjust for Card 4 -->
+                    <div class="bg-blue-950 rounded-lg overflow-hidden shadow-md w-90">
+                        <img class="w-full h-auto" src="mazegame.png" alt="New Project 4">
+                        <div class="p-4">
+                            <p class="font-bold text-lg mb-2">New Project 4</p>
+                            <p class=" text-sm">Description for the new project.</p>
+                            <a href="Project4.html" class="block mt-2 bg-purple-500 hover:bg-purple-700 text-white font-bold py-1 px-2 rounded">View Project</a>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate and adjust for Card 5 -->
+                    <div class="bg-blue-950 rounded-lg overflow-hidden shadow-md">
+                        <img class="w-full h-auto" src="mazegame.png" alt="New Project 5">
+                        <div class="p-6">
+                            <p class="font-bold text-xl mb-2">New Project 5</p>
+                            <p class=" text-base">Description for the new project.</p>
+                            <a href="Project5.html" class="block mt-4 bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">View Project</a>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate and adjust for Card 6 -->
+                    <div class="bg-blue-950 rounded-lg overflow-hidden shadow-md">
+                        <img class="w-full h-auto" src="mazegame.png" alt="New Project 6">
+                        <div class="p-6">
+                            <p class="font-bold text-xl mb-2">New Project 6</p>
+                            <p class=" text-base">Description for the new project.</p>
+                            <a href="Project6.html" class="block mt-4 bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">View Project</a>
+                        </div>
+                    </div>
+                </div>
+
+        
+
 
         
 
