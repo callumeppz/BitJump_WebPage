@@ -572,6 +572,14 @@ video {
   position: relative;
 }
 
+.bottom-5 {
+  bottom: 1.25rem;
+}
+
+.bottom-10 {
+  bottom: 2.5rem;
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -919,6 +927,8 @@ body {
 
 .dark-mode .slider {
   background-image: url("sun.png");
+  background-color: rgb(17 24 39);
+  height: auto;
 }
 
 /* You can specify specific elements where needed */
@@ -1230,13 +1240,17 @@ h2:hover {
 #dropdown-products {
   display: none;
   background-color: hsl(231, 25%, 16%);
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
+  /* Adding transition for opacity and height */
   opacity: 0;
+  height: 0;
+  overflow: hidden;
 }
 
 #menu-products:checked #dropdown-products,
 #menu-products:hover #dropdown-products {
-  display: block;
+  height: auto;
+  /* Set height to auto on hover or when checked */
   opacity: 1;
   /* Adding transition for opacity */
   background-color: rgb(17 24 39);

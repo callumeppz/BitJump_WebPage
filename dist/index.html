@@ -1,199 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
     <title>Callum Apps Portfolio</title>
-    <meta name="description" content="Computer Science Graduate">
-    <meta name="robots" content="index, follow">
-    <link rel="icon" href="dist/github.png">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="input.css">
-    <link rel="stylesheet" href="output.css">
-</head>
+    <meta name="description" content="Computer Science Graduate" />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" href="dist/github.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="input.css" />
+    <link rel="stylesheet" href="output.css" />
+  </head>
 
-
-<body class="overflow-hidden">
+  <body class="overflow-hidden">
     <script src="Darkmode.js"></script>
-    <header nav class="navbar flex-container p-2 sm:p-3 md:p-4 lg:p-6 bg-gray-900">
-        <nav class="nav flex-item text-center space-x-1 sm:space-x-2 md:space-x-3 lg:space-x-4">
-            <a href="index.html">
-                <button class="tablinks bg-gray-900 hover:text-purple-300 focus:outline-none focus:shadow-outline-purple transition-transform duration-300 transform active:scale-95 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm">
-                    Home
-            </button>
-            </a>
-            <a href="Project1.html">
-                <button class="tablinks bg-gray-900 hover:text-purple-300 focus:outline-none focus:shadow-outline-purple transition-transform duration-300 transform active:scale-95 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm">
-                    Projects
-                </button>
-            </a>
-            <a href="About.html">
-                <button class="tablinks bg-gray-900 hover:text-purple-300 focus:outline-none focus:shadow-outline-purple transition-transform duration-300 transform active:scale-95 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm">
-                    About
-                </button>
-            </a>
-            <a href="ContactME.html">
-                <button class="tablinks bg-gray-900 hover:text-purple-300 focus:outline-none focus:shadow-outline-purple transition-transform duration-300 transform active:scale-95 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm">
-                    Contact Me
-                </button>
-            </a>
-            <a class="self-left" target="_blank" href="https://github.com/callumeppz">
-                <button class="tablinks bg-gray-900 hover:text-purple-300 focus:outline-none focus:shadow-outline-purple transition-transform duration-300 transform active:scale-95 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm">
-                    GitHub
-                </button>
-            </a>
-            <label class="switch te">
-                <input id="darkModeToggle" class="darkmode" onclick="toggleDarkMode()">
-                <span class="slider round"></span>
-              </label>
-        </nav>
+    <header
+      nav
+      class="navbar flex-container p-2 sm:p-3 md:p-4 lg:p-6 bg-gray-900"
+    >
+      <nav
+        class="nav flex-item text-center space-x-1 sm:space-x-2 md:space-x-3 lg:space-x-4"
+      >
+        <a href="index.html">
+          <button
+            class="tablinks bg-gray-900 hover:text-purple-300 focus:outline-none focus:shadow-outline-purple transition-transform duration-300 transform active:scale-95 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm"
+          >
+            Home
+          </button>
+        </a>
+        <a href="Project1.html">
+          <button
+            class="tablinks bg-gray-900 hover:text-purple-300 focus:outline-none focus:shadow-outline-purple transition-transform duration-300 transform active:scale-95 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm"
+          >
+            Projects
+          </button>
+        </a>
+        <a href="About.html">
+          <button
+            class="tablinks bg-gray-900 hover:text-purple-300 focus:outline-none focus:shadow-outline-purple transition-transform duration-300 transform active:scale-95 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm"
+          >
+            About
+          </button>
+        </a>
+        <a href="ContactME.html">
+          <button
+            class="tablinks bg-gray-900 hover:text-purple-300 focus:outline-none focus:shadow-outline-purple transition-transform duration-300 transform active:scale-95 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm"
+          >
+            Contact Me
+          </button>
+        </a>
+        <a
+          class="self-left"
+          target="_blank"
+          href="https://github.com/callumeppz"
+        >
+          <button
+            class="tablinks bg-gray-900 hover:text-purple-300 focus:outline-none focus:shadow-outline-purple transition-transform duration-300 transform active:scale-95 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm"
+          >
+            GitHub
+          </button>
+        </a>
+        <label class="switch te bg-gray-900">
+          <input
+            id="darkModeToggle"
+            class="darkmode"
+            onclick="toggleDarkMode()"
+          />
+          <span class="slider bg-gray-900"></span>
+        </label>
+      </nav>
     </header>
 
-    
     <!-- Main Content -->
     <main class="p-4 md:p-8 lg:p-16">
-        <div class="welcome-text">
-            <div class="slider-thumb">
-                <div class="slider-thumb"></div>
-                <div class="text-container">
-                    <h1 id="TITLE" class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"><strong>Welcome</strong></h1>
-                </div>
+      <div class="welcome-text">
+        <div class="slider-thumb">
+          <div class="slider-thumb"></div>
+          <div class="text-container">
+            <h1
+              id="TITLE"
+              class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl"
+            >
+              <strong>Welcome</strong>
+            </h1>
+          </div>
 
-                <div class="textarea">
-                    <hr class="my-4 md:my-8 lg:my-12 h-0.1 bg-gray-900">
+          <div class="textarea">
+            <hr class="my-4 md:my-8 lg:my-12 h-0.1 bg-gray-900" />
 
-                    <p class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
-                        My name is Callum Apps and I'm a Computer <br>Science Student based in Reading, UK.
-                            You can <br>find more about me, my work and my <br> interests on GitHub or LinkedIn.
-                    </p>
-                </div>
-            </div>
+            <p class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+              My name is Callum Apps and I'm a Computer <br />Science Student
+              based in Reading, UK. You can <br />find more about me, my work
+              and my <br />
+              interests on GitHub or LinkedIn.
+            </p>
+          </div>
         </div>
+      </div>
     </main>
 
-            
+    <!-- Project Container -->
 
-                <!-- Project Container -->
-                
-                    <div class="description flex flex-col space-y-8 md:space-y-0 md:flex-row rounded bg-gray-900 mb-10 ">
-                        <div class="flex flex-col justify-center items-center p-8 md:w-1/2 lg:w-1/3">
-                            <!-- Content for the first column -->
-                            <p class="info-text-short max-w-2xl bg-adadff p-6 mt-6 transition-transform duration-300 ease-in-out text-center bg-gray-900">
-                                I'm a passionate Third-Year Computer Science student <br>enrolled at the University of Reading. <br>My journey in this dynamic field has 
-                                equipped me with a diverse skill set that includes <br>proficiency in several programming languages such as Java, C, Python, JavaScript, and HTML/CSS. <br>
-                                For a comprehensive overview of my academic background, skills, and experiences, <br>please explore my About Me Page.
-                            </p>
-                            <button class="CVButton">
-                                <a class="About Me" href="About.html"><strong>About Me</strong></a>
-                            </button>
-                        </div>
-            
+    <div
+      class="description flex flex-col space-y-8 md:space-y-0 md:flex-row rounded bg-gray-900 mb-10"
+    >
+      <div
+        class="flex flex-col justify-center items-center p-8 md:w-1/2 lg:w-1/3"
+      >
+        <!-- Content for the first column -->
+        <p
+          class="info-text-short max-w-2xl bg-adadff p-6 mt-6 transition-transform duration-300 ease-in-out text-center bg-gray-900"
+        >
+          I'm a passionate Third-Year Computer Science student <br />enrolled at
+          the University of Reading. <br />My journey in this dynamic field has
+          equipped me with a diverse skill set that includes <br />proficiency
+          in several programming languages such as Java, C, Python, JavaScript,
+          and HTML/CSS. <br />
+          For a comprehensive overview of my academic background, skills, and
+          experiences, <br />please explore my About Me Page.
+        </p>
+        <button class="CVButton">
+          <a class="About Me" href="About.html"><strong>About Me</strong></a>
+        </button>
+      </div>
 
-                        <div class="flex flex-col text-center md:w-1/5 lg:w-2/3">
-                            <script src="ClickQuery.js"></script>
-                            <script>
-                                $(document).ready(function(){
-                                    $('.menu-products').on('click', function(){
-                                        $(this).find('.dropdown-products').toggle();
-                                    });
-                                });
-                            </script>
-                            <h4><strong>Experience</strong></h4>
-                            <ul>
-                                <li id="menu-products">
-                                    <label for="dd" class="TRIAL">Skills and Experience</label>
-                                    <input type="checkbox" id="dd" hidden>
-                                    <ul id="dropdown-products">
-                                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur fugiat, officiis in illum sunt asperiores quidem odit nobis aliquid modi quaerat unde, brducimus sapiente placeat magni perferendis natus necessitatibus!</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li id="menu-products">
-                                    <label for="dd" class="TRIAL2">Project I am currently working on</label>
-                                    <input type="checkbox" id="dd" hidden>
-                                    <ul id="dropdown-products">
-                                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur fugiat, officiis in illum sunt asperiores quidem odit nobis aliquid modi quaerat unde, brducimus sapiente placeat magni perferendis natus necessitatibus!</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li id="menu-products">
-                                    <label for="dd" class="TRIAL3">Certifications</label>
-                                    <input type="checkbox" id="dd" hidden>
-                                    <ul id="dropdown-products">
-                                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur fugiat, officiis in illum sunt asperiores quidem odit nobis aliquid modi quaerat unde, brducimus sapiente placeat magni perferendis natus necessitatibus!</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <ul>
-                                <li id="menu-products">
-                                    <label for="dd" class="TRIAL3">More about me</label>
-                                    <input type="checkbox" id="dd" hidden>
-                                    <ul id="dropdown-products">
-                                        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur fugiat, officiis in illum sunt asperiores quidem odit nobis aliquid modi quaerat unde, brducimus sapiente placeat magni perferendis natus necessitatibus!</li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                        </div>
-                         
+      <div class="flex flex-col text-center md:w-1/5 lg:w-2/3">
+        <script src="ClickQuery.js"></script>
+        <script>
+          $(document).ready(function () {
+            $(".menu-products").on("click", function () {
+              $(this).find(".dropdown-products").toggle();
+            });
+          });
+        </script>
+        <h4><strong>Experience</strong></h4>
+        <ul>
+          <li id="menu-products">
+            <label for="dd" class="TRIAL">Skills and Experience</label>
+            <input type="checkbox" id="dd" hidden />
+            <ul id="dropdown-products">
+                <p>
+                    Having delved into the realm of Computer Science for the past 8 years, 
+                    starting from my GCSE days and now pursuing advanced studies at the university level, 
+                    my passion for computing has only deepened. A glance at my GitHub profile reveals a diverse array of projects, 
+                    spanning from fundamental HTML/CSS to more intricate, object-oriented languages like C++ and Python. <br>
+                    As I embark on a Graduate Software Engineer position, my aim is not only to thrive in the role but also to expand and 
+                    refine my current skill set. The prospect of contributing to innovative projects and continuous learning 
+                    in the dynamic landscape of software engineering excites me.
+                </p>
+              </li>
+            </ul>
+        </ul>
+        <ul>
+          <li id="menu-products">
+            <label for="dd" class="TRIAL2"
+              >Project I am currently working on</label
+            >
+            <input type="checkbox" id="dd" hidden />
+            <ul id="dropdown-products">
+                <p>
+                    Currently, I am focused on refining my skills in C and Python programming languages, actively contributing to my GitHub with public revision guides aimed at helping others refresh their knowledge in these languages. This project not only allows me to delve into the fundamentals of Data Structures and Algorithms but also provides valuable support to fellow learners. <br>
+                    Simultaneously, my attention is dedicated to my dissertation, where I am employing network programming to develop a distinctive platformer game that seamlessly combines 2D and 3D aspects. Balancing this with my ongoing coursework adds a dynamic and rewarding dimension to my current endeavors.
+                  </p>
                   
-                    
-                <!-- Project Container -->
-                <div class="grid grid-cols-1 px-4; md:grid-cols-2 lg:grid-cols-4 gap-2 px-4">
-                    <!-- Project Card 1 -->
-                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-md w-90">
-                        <img class="w-full h-auto" src="mazegame.png" alt="Random Maze Game">
-                        <div class="p-6">
-                            <p class="font-bold text-xl mb-2">Drone Simulation Game</p>
-                            <p class=" text-base">This project was my first Java coursework in year 2 of university, which involved me having to create a system that simulated randomly moving, colliding drones.</p>
-                            <a href="Project2.html" class="block mt-4 bg-gray-800 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">View Project</a>
-                        </div>
-                    </div>
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <li id="menu-products">
+            <label for="dd" class="TRIAL3">Certifications & Grades</label>
+            <input type="checkbox" id="dd" hidden />
+            <ul id="dropdown-products">
+              <li>
+                I am persuing a certification in C# from Microsoft and FreeCodeCamp aswell as having a few differnt Linkedin Certifications.
+                However, I am most proud of my current grades at university, ranging from 65-100% in each of my pieces of coursework, averaging over 75% in my three years combined, and
+                on track to receive a first class degree in BSc Computer Science!
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <li id="menu-products">
+            <label for="dd" class="TRIAL3">More about me</label>
+            <input type="checkbox" id="dd" hidden />
+            <ul id="dropdown-products">
+              <li>
+                <p>
+                    I currently live in Reading, but I'll soon be relocating for my new job. <br>
+                    Currently, I work as an IT Support Analyst for my university, where I assist staff and students with troubleshooting and other IT-related queries. <br>
+                    Outside of work, I have a passion for traveling and exploring. My goal is to visit as many countries in Europe as possible!
+                  </p>
+                  
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-                    <!-- Project Card 2 -->
-                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-md">
-                        <img class="w-full h-auto" src="mazegame.png" alt="Drone Simulation Game">
-                        <div class="p-6">
-                            <p class="font-bold text-xl mb-2">Drone Simulation Game</p>
-                            <p class=" text-base">This project was my first Java coursework in year 2 of university, which involved me having to create a system that simulated randomly moving, colliding drones.</p>
-                            <a href="Project2.html" class="block mt-4 bg-gray-800 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">View Project</a>
-                        </div>
-                    </div>
+    <!-- Project Container -->
+    <div
+      class="grid grid-cols-1 px-4; md:grid-cols-2 lg:grid-cols-4 gap-2 px-4"
+    >
+      <!-- Project Card 1 -->
+      <div class="bg-gray-900 rounded-lg overflow-hidden shadow-md w-90">
+        <img class="w-full h-auto" src="droneimg.png" alt="Random Maze Game" />
+        <div class="p-6">
+          <p class="font-bold text-xl mb-2">Drone Simulation Game</p>
+          <p class="text-base">
+            This project was my first Java coursework in year 2 of university,
+            which involved me having to create a system that simulated randomly
+            moving, colliding drones.
+          </p>
+          <a
+            href="Project2.html"
+            class="block mt-4 bg-gray-800 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
+            >View Project</a
+          >
+        </div>
+      </div>
 
-                    <!-- Project Card 3 -->
-                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-md">
-                        <img class="w-full h-auto" src="mazegame.png" alt="Placeholder Text">
-                        <div class="p-6">
-                            <p class="font-bold text-xl mb-2">Placeholder Text</p>
-                            <p class=" text-base">This involved me creating a randomly generating algorithm that ensured that there was always an exit, this was also my second Java coursework.</p>
-                            <a href="Project3.html" class="block mt-4 bg-gray-800 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">View Project</a>
-                        </div>
-                    </div>
+      <!-- Project Card 2 -->
+      <div class="bg-gray-900 rounded-lg overflow-hidden shadow-md">
+        <img
+          class="w-full h-auto"
+          src="mazegame.png"
+          alt="Drone Simulation Game"
+        />
+        <div class="p-6">
+          <p class="font-bold text-xl mb-2">Randomly Generating Maze</p>
+          <p class="text-base">
+            This involved me creating a randomly generating algorithm that
+            ensured that there was always an exit, this was also my second Java
+            coursework.
+          </p>
+          <a
+            href="Project2.html"
+            class="block mt-4 bg-gray-800 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
+            >View Project</a
+          >
+        </div>
+      </div>
 
-                    <!-- Duplicate and adjust for Card 4 -->
-                    <div class="bg-gray-900 rounded-lg overflow-hidden shadow-md w-90">
-                        <img class="w-full h-auto" src="mazegame.png" alt="New Project 4">
-                        <div class="p-6">
-                            <p class="font-bold text-xl mb-2">Drone Simulation Game</p>
-                            <p class=" text-base">This project was my first Java coursework in year 2 of university, which involved me having to create a system that simulated randomly moving, colliding drones.</p>
-                            <a href="Project2.html" class="block mt-4 bg-gray-800 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded">View Project</a>
-                        </div>
-                    </div>
+      <!-- Project Card 3 -->
+      <div class="bg-gray-900 rounded-lg overflow-hidden shadow-md">
+        <img class="w-full h-auto" src="DissProj.png" alt="Placeholder Text" />
+        <div class="p-6">
+          <p class="font-bold text-xl mb-2">Dissertation Project - Networked Unity Application</p>
+          <p class="text-base">
+            My dissertation project would focus on the production of an interactable platformer game, allowing for
+            players to connect over a network. This project was done in Unity, and used the Photon extension to host for free.
+          </p>
+          <a
+            href="Project3.html"
+            class="block mt-4 bg-gray-800 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
+            >View Project</a
+          >
+        </div>
+      </div>
 
-                </div>
+      <!-- Duplicate and adjust for Card 4 -->
+      <div class="bg-gray-900 rounded-lg overflow-hidden shadow-md w-90">
+        <img class="w-full h-auto" src="Webdev.png" alt="New Project 4" />
+        <div class="p-6">
+          <p class="font-bold text-xl mb-2">Website Development</p>
+          <p class="text-base">
+            This project was the involvement of the creation of this website. This was done with vanilla
+            HTML, CSS, and elements of JavaScript using the tailwind framework. 
+          </p>
+          <a
+            href="Project2.html"
+            class="block mt-4 bg-gray-800 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
+            >View Project</a
+          >
+        </div>
+      </div>
+    </div>
 
     <!-- Footer for Social Links -->
     <footer class="mt-8">
-        <div class="links text-center">
-            <p class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">Created in 2023, Social links:
-                <a target="_blank" href="https://github.com/callumeppz">GitHub</a>
-            </p>
-        </div>
+      <div class="links text-center">
+        <p class="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl">
+          Created in 2023, Social links:
+          <a target="_blank" href="https://github.com/callumeppz">GitHub</a>
+        </p>
+      </div>
     </footer>
-
-</body>
-
+  </body>
 </html>
