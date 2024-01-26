@@ -16,44 +16,122 @@
 
 <body class="bg-gray-900">
 
-    <!-- Header and Tabs -->
-    <header nav class="navbar flex-container p-4 md:p-6 lg:p-8 bg-gray-900">
-        <nav class="nav flex-item text-center space-x-4 sm:space-x-8 md:space-x-10">
+    <body class="overflow-hidden">
+        <script src="Darkmode.js"></script>
+        <header
+          nav
+          class="navbar flex-container p-2 sm:p-3 md:p-4 lg:p-6 bg-gray-900"
+        >
+          <nav
+            class="nav flex-item text-center space-x-1 sm:space-x-2 md:space-x-3 lg:space-x-4"
+          >
             <a href="index.html">
-                <button class="tablinks bg-gray-900">Home</button>
+              <button
+                class="tablinks bg-gray-900 hover:text-purple-300 focus:outline-none focus:shadow-outline-purple transition-transform duration-300 transform active:scale-95 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm"
+              >
+                Home
+              </button>
             </a>
             <a href="Project1.html">
-                <button class="tablinks bg-gray-900">Projects</button>
+              <button
+                class="tablinks bg-gray-900 hover:text-purple-300 focus:outline-none focus:shadow-outline-purple transition-transform duration-300 transform active:scale-95 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm"
+              >
+                Projects
+              </button>
             </a>
             <a href="About.html">
-                <button class="tablinks bg-gray-900">About</button>
+              <button
+                class="tablinks bg-gray-900 hover:text-purple-300 focus:outline-none focus:shadow-outline-purple transition-transform duration-300 transform active:scale-95 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm"
+              >
+                About
+              </button>
             </a>
-            <a class="self-left" target="_blank" href="https://github.com/callumeppz">
-                <button class="tablinks bg-gray-900">GitHub</button>
+            <a href="ContactME.html">
+              <button
+                class="tablinks bg-gray-900 hover:text-purple-300 focus:outline-none focus:shadow-outline-purple transition-transform duration-300 transform active:scale-95 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm"
+              >
+                Contact Me
+              </button>
             </a>
-        </nav>
-    </header>
+            <a
+              class="self-left"
+              target="_blank"
+              href="https://github.com/callumeppz"
+            >
+              <button
+                class="tablinks bg-gray-900 hover:text-purple-300 focus:outline-none focus:shadow-outline-purple transition-transform duration-300 transform active:scale-95 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm"
+              >
+                GitHub
+              </button>
+            </a>
+            <label class="switch te bg-gray-900">
+              <input
+                id="darkModeToggle"
+                class="darkmode"
+                onclick="toggleDarkMode()"
+              />
+              <span class="slider bg-gray-900"></span>
+            </label>
+          </nav>
+        </header>
+    
 
 
+  <!-- Hoverable Container -->
+  <div class="hover-container overflow-hidden">
+    <!-- Project Container -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-4">
+      <!-- Your existing project cards here -->
+      <!-- Project Card 1 -->
+      <div class="bg-gray-900 rounded-lg overflow-hidden shadow-md h-full project-card">
+        <img class="w-full object-cover transition-transform transform-gpu duration-300" src="droneimg.png" alt="Randomly Generating Maze" />
+        <div class="p-6 flex flex-col">
+          <p class="font-bold text-xl mb-2">Drone Simulator</p>
+          <p class="text-base">
+            This project was my first Java coursework in year 2 of university, which involved me having to create a system that simulated randomly moving, colliding drones.
+          </p>
+          <a href="Project1.html" class="mt-4 bg-gray-800 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded block">View Project</a>
+        </div>
+      </div>
 
-
-<!-- Project Container -->
-<div class="project-row mt-8 space-y-4 flex flex-col sm:flex-row rounde" id="project-rows">
-    <div class="flex-row p-4 md:p-8 lg:p-16">
-
-        <p class="article-text mt-4 sm:mt-0">As part of my second-year university Java course, I embarked on an engaging project involving a drone simulator. The primary aim was to design and develop a distinctive, interactive drone simulation utilizing Java. This project also incorporated user manual input for moving drones and offered a saving, loading and different levels of intensity for the drones.
-
-            The complete source code for the project can be accessed through the GitHub link provided above.</p>
-        
-        <figure class="relative max-w-full md:max-w-sm lg:max-w-md transition-all duration-300 cursor-pointer filter grayscale hover:grayscale-0">
-            <img class="w-full h-auto rounded-lg p-4 md:p-8 lg:p-100" src="Computer.jpg" alt="image description">
-        </figure>
-        <h1>Drone Simulation</h1>
+  <!-- Project Card 2 -->
+  <div class="bg-gray-900 rounded-lg overflow-hidden shadow-md h-full project-card">
+    <img class="w-full object-cover transition-transform transform-gpu duration-300" src="mazegame.png" alt="Randomly Generating Maze" />
+    <div class="p-6 flex flex-col">
+      <p class="font-bold text-xl mb-2">Random Generating Maze</p>
+      <p class="text-base">
+        This involved me creating a randomly generating algorithm that ensured that there was always an exit; this was also my second Java coursework.
+      </p>
+      <a href="Project2.html" class="mt-4 bg-gray-800 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded block">View Project</a>
     </div>
+  </div>
 
+  <!-- Project Card 3 -->
+  <div class="bg-gray-900 rounded-lg overflow-hidden shadow-md h-full project-card">
+    <img class="w-full object-cover transition-transform transform-gpu duration-300" src="DissProj.png" alt="Randomly Generating Maze" />
+    <div class="p-6 flex flex-col">
+      <p class="font-bold text-xl mb-2">Networked Unity Application</p>
+      <p class="text-base">
+        My dissertation project focused on Networked Multiplayer Games. This project was done in Unity and used the Photon extension to host for free.
+      </p>
+      <a href="Project3.html" class="mt-4 bg-gray-800 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded block">View Project</a>
     </div>
+  </div>
+
+  <!-- Project Card 4 -->
+  <div class="bg-gray-900 rounded-lg overflow-hidden shadow-md h-full project-card">
+    <img class="w-full object-cover transition-transform transform-gpu duration-300" src="Webdev.png" alt="Randomly Generating Maze" />
+    <div class="p-6 flex flex-col">
+      <p class="font-bold text-xl mb-2">Website Development</p>
+      <p class="text-base">
+        This project involved the creation of this website with vanilla HTML, CSS, and elements of JavaScript using the Tailwind framework.
+      </p>
+      <a href="Project4.html" class="mt-4 bg-gray-800 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded block">View Project</a>
+    </div>
+  </div>
 </div>
-  
+</div>
+</div>
 
     <!-- Footer for Social Links -->
     <footer class="mt-8">
