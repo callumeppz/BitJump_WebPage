@@ -572,14 +572,6 @@ video {
   position: relative;
 }
 
-.bottom-5 {
-  bottom: 1.25rem;
-}
-
-.bottom-10 {
-  bottom: 2.5rem;
-}
-
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -847,10 +839,10 @@ video {
 }
 
 @font-face {
-  font-family: 'montserratthin_italic';
+  font-family: "montserratthin_italic";
 
   src: url("montserrat-italic-variablefont_wght-webfont.woff2") format("woff2"),
-         url("montserrat-italic-variablefont_wght-webfont.woff") format("woff");
+    url("montserrat-italic-variablefont_wght-webfont.woff") format("woff");
 
   font-weight: normal;
 
@@ -889,7 +881,7 @@ body {
   color: var(--text-color);
   margin: 0;
   padding: 0;
-  font-family: 'montserratthin_italic';
+  font-family: "montserratthin_italic";
   overflow-x: hidden;
   display: block;
 }
@@ -898,7 +890,7 @@ body {
   background: linear-gradient(90deg, #161616, rgb(25, 25, 26));
 }
 
-.project-row.dark-mode{
+.project-row.dark-mode {
   background-color: #000000;
 }
 
@@ -936,7 +928,8 @@ body {
 /* For example, if you want a container to use the custom font */
 
 * {
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 header {
@@ -972,13 +965,14 @@ main {
   background-color: rgba(255, 255, 255, 0.116);
   background-size: cover;
   /* Adjust as needed */
-  transition:  .6s;
+  transition: 0.6s;
 }
 
 /* Slider Animation */
 
 .slider-thumb::before {
-  border: 8px solid rgb(17 24 39);; /* Added style ('solid') and color ('#000000') */
+  border: 8px solid rgb(17 24 39);
+  /* Added style ('solid') and color ('#000000') */
   position: absolute;
   content: "";
   left: 50%;
@@ -995,7 +989,8 @@ main {
 }
 
 @keyframes sliderShape {
-  0%, 100% {
+  0%,
+  100% {
     border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
     transform: translate3d(0, 0, 0) rotateZ(0.01deg);
   }
@@ -1015,7 +1010,7 @@ main {
   }
 }
 
-h1{
+h1 {
   font-size: inherit;
   transition: transform 0.3s;
   /*text-shadow: 2px 0 transparent, -2px 0 rgb(255, 255, 255), 0 2px #9e9ef2, 0 -2px #ffffff,
@@ -1026,28 +1021,27 @@ h1{
   font-size: 80px;
 }
 
-h1:hover{
+h1:hover {
   transform: scale(1.05);
 }
 
-h2{
-  font-size: 50PX;
+h2 {
   color: #d2b6f7;
   transition: transform 0.3s;
-  text-shadow: 2px 0 transparent, -2px 0 transparent, 0 2px #866bd7, 0 -2px #000000,
-             1px 1px #5113e2, -1px -1px #3a14e4, 1px -1px #4010f0, -1px 1px #050ef9;
+  text-shadow: 2px 0 transparent, -2px 0 transparent, 0 2px #866bd7,
+    0 -2px #000000, 1px 1px #5113e2, -1px -1px #3a14e4, 1px -1px #4010f0,
+    -1px 1px #050ef9;
   margin-top: 100px;
   font-weight: 100;
   font-size: 80px;
   text-align: center;
 }
 
-h2:hover{
+h2:hover {
   transform: scale(1.05);
 }
 
-h3{
-  font-size: 40PX;
+h3 {
   transition: transform 0.3s;
   margin-top: 100px;
   font-weight: 100;
@@ -1056,11 +1050,11 @@ h3{
   align-self: center;
 }
 
-h3:hover{
+h3:hover {
   transform: scale(1.05);
 }
 
-h4{
+h4 {
   font-size: inherit;
   /*text-shadow: 2px 0 transparent, -2px 0 rgb(255, 255, 255), 0 2px #9e9ef2, 0 -2px #ffffff,
              1px 1px #cab4ff, -1px -1px #ddd6ff, 1px -1px #d1c5ff, -1px 1px #bdbffa;*/
@@ -1117,20 +1111,20 @@ h2:hover {
 .article-text {
   background-color: rgb(17 24 39);
   border: 10px;
-  border-radius:10px;
+  border-radius: 10px;
   padding: 10px;
   margin-top: 10px;
   opacity: 10;
   transition: 1.2s;
   text-align: center;
-  align-items:center;
+  align-items: center;
   place-items: center;
 }
 
 .article-text:hover {
   transition: 1.2s;
   transform: scale(1.05);
-  background-color:rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
   opacity: 100;
   box-shadow: rgba(255, 255, 255, 0.8) 0 0 4px 4px;
 }
@@ -1160,7 +1154,7 @@ h2:hover {
 .flex-row {
   background-color: #050ef9;
   display: flex;
-  flex-direction:column-reverse;
+  flex-direction: column-reverse;
   /* Set flex direction to column */
   align-items: center;
   /* Align items at the center horizontally */
@@ -1191,7 +1185,7 @@ h2:hover {
 
 #new {
   background-image: url(Computer.jpg);
-  background-size:cover;
+  background-size: cover;
   background-attachment: fixed;
   margin-top: 40px;
 }
@@ -1199,7 +1193,7 @@ h2:hover {
 .Info {
   background-color: hsl(231, 25%, 16%);
   display: flex;
-  flex-direction:column-reverse;
+  flex-direction: column-reverse;
   /* Set flex direction to column */
   align-items: center;
   /* Align items at the center horizontally */
@@ -1256,7 +1250,7 @@ h2:hover {
   background-color: rgb(17 24 39);
   margin: 10px;
   border-radius: 10px;
-  transition: 1.0s;
+  transition: 1s;
 }
 
 label {
@@ -1274,8 +1268,6 @@ label {
   transition: 1.2;
 }
 
-/* Change the background color on hover */
-
 .CVButton {
   margin-top: 10px;
   text-align: center;
@@ -1283,7 +1275,7 @@ label {
   padding-right: 100px;
   padding-left: 100px;
   border: 10px;
-  border-radius:10px;
+  border-radius: 10px;
   background-color: hsl(231, 25%, 16%);
   transition: 1.2s;
 }
@@ -1292,13 +1284,13 @@ label {
   transform: scale(1.1);
   transition: 1.2s;
   background-color: rgb(17 24 39);
-  padding: 1.0rem, 1.0rem;
+  padding: 1rem, 1rem;
   /* Adjust the initial and hover padding as needed */
   background-color: rgb(118, 10, 233);
 }
 
-.CV{
-  background-color:rgb(197, 191, 255);
+.CV {
+  background-color: rgb(197, 191, 255);
   margin-left: 100px;
   padding: 100px;
 }
@@ -1318,10 +1310,12 @@ label {
 
 /* Form Styles */
 
-input[type=text], select, textarea {
+input[type="text"],
+select,
+textarea {
   width: 100%;
   padding: 12px;
-  background-color:rgb(127, 112, 168);
+  background-color: rgb(127, 112, 168);
   border: 1px solid rgb(120, 97, 182);
   border-radius: 4px;
   box-sizing: border-box;
@@ -1332,7 +1326,9 @@ input[type=text], select, textarea {
   color: rgb(255, 255, 255);
 }
 
-input[type=email], select, textarea {
+input[type="email"],
+select,
+textarea {
   width: 100%;
   padding: 12px;
   background-color: rgb(127, 112, 168);
