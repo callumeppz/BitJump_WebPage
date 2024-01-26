@@ -440,24 +440,30 @@ label {
 
 /* Styles for the outer container */
 .hover-container {
-  height: 60%;
+  height: 40%;
 }
 
 .project-card {
   transition: transform 0.8s;
+  cursor: pointer;
 }
 
-.project-card:hover {
+.project-card:hover,
+.project-card:checked {
   height: 100%;
+  cursor: pointer;
 }
 
-.project-card:hover img {
-  height: 55%;
+.project-card:hover img,
+.project-card:checked img  {
+  height: 65%;
+  cursor: pointer;
   transition: height 0.8s;
 }
 
 .project-card img {
-  height: 30%;
+  height: 55%;
+  cursor: pointer;
   transition: height 0.8s;
 }
 
