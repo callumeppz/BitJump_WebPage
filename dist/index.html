@@ -196,92 +196,68 @@
                     Currently, I work as an IT Support Analyst for my university, where I assist staff and students with troubleshooting and other IT-related queries. <br>
                     Outside of work, I have a passion for traveling and exploring. My goal is to visit as many countries in Europe as possible!
                   </p>
-                  
               </li>
             </ul>
           </li>
         </ul>
       </div>
     </div>
-
+    
+  <!-- Hoverable Container -->
+  <div class="hover-container overflow-hidden">
     <!-- Project Container -->
-    <div
-      class="grid grid-cols-1 px-4; md:grid-cols-2 lg:grid-cols-4 gap-2 px-4"
-    >
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-4">
+      <!-- Your existing project cards here -->
       <!-- Project Card 1 -->
-      <div class="bg-gray-900 rounded-lg overflow-hidden shadow-md w-90">
-        <img class="w-full h-auto" src="droneimg.png" alt="Random Maze Game" />
-        <div class="p-6">
-          <p class="font-bold text-xl mb-2">Drone Simulation Game</p>
+      <div class="bg-gray-900 rounded-lg overflow-hidden shadow-md h-full project-card">
+        <img class="w-full object-cover transition-transform transform-gpu duration-300" src="droneimg.png" alt="Randomly Generating Maze" />
+        <div class="p-6 flex flex-col">
+          <p class="font-bold text-xl mb-2">Drone Simulator</p>
           <p class="text-base">
-            This project was my first Java coursework in year 2 of university,
-            which involved me having to create a system that simulated randomly
-            moving, colliding drones.
+            This project was my first Java coursework in year 2 of university, which involved me having to create a system that simulated randomly moving, colliding drones.
           </p>
-          <a
-            href="Project2.html"
-            class="block mt-4 bg-gray-800 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
-            >View Project</a
-          >
+          <a href="Project1.html" class="mt-4 bg-gray-800 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded block">View Project</a>
         </div>
       </div>
 
-      <!-- Project Card 2 -->
-      <div class="bg-gray-900 rounded-lg overflow-hidden shadow-md">
-        <img
-          class="w-full h-auto"
-          src="mazegame.png"
-          alt="Drone Simulation Game"
-        />
-        <div class="p-6">
-          <p class="font-bold text-xl mb-2">Randomly Generating Maze</p>
-          <p class="text-base">
-            This involved me creating a randomly generating algorithm that
-            ensured that there was always an exit, this was also my second Java
-            coursework.
-          </p>
-          <a
-            href="Project2.html"
-            class="block mt-4 bg-gray-800 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
-            >View Project</a
-          >
-        </div>
-      </div>
-
-      <!-- Project Card 3 -->
-      <div class="bg-gray-900 rounded-lg overflow-hidden shadow-md">
-        <img class="w-full h-auto" src="DissProj.png" alt="Placeholder Text" />
-        <div class="p-6">
-          <p class="font-bold text-xl mb-2">Dissertation Project - Networked Unity Application</p>
-          <p class="text-base">
-            My dissertation project would focus on the production of an interactable platformer game, allowing for
-            players to connect over a network. This project was done in Unity, and used the Photon extension to host for free.
-          </p>
-          <a
-            href="Project3.html"
-            class="block mt-4 bg-gray-800 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
-            >View Project</a
-          >
-        </div>
-      </div>
-
-      <!-- Duplicate and adjust for Card 4 -->
-      <div class="bg-gray-900 rounded-lg overflow-hidden shadow-md w-90">
-        <img class="w-full h-auto" src="Webdev.png" alt="New Project 4" />
-        <div class="p-6">
-          <p class="font-bold text-xl mb-2">Website Development</p>
-          <p class="text-base">
-            This project was the involvement of the creation of this website. This was done with vanilla
-            HTML, CSS, and elements of JavaScript using the tailwind framework. 
-          </p>
-          <a
-            href="Project2.html"
-            class="block mt-4 bg-gray-800 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded"
-            >View Project</a
-          >
-        </div>
-      </div>
+  <!-- Project Card 2 -->
+  <div class="bg-gray-900 rounded-lg overflow-hidden shadow-md h-full project-card">
+    <img class="w-full object-cover transition-transform transform-gpu duration-300" src="mazegame.png" alt="Randomly Generating Maze" />
+    <div class="p-6 flex flex-col">
+      <p class="font-bold text-xl mb-2">Random Generating Maze</p>
+      <p class="text-base">
+        This involved me creating a randomly generating algorithm that ensured that there was always an exit; this was also my second Java coursework.
+      </p>
+      <a href="Project2.html" class="mt-4 bg-gray-800 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded block">View Project</a>
     </div>
+  </div>
+
+  <!-- Project Card 3 -->
+  <div class="bg-gray-900 rounded-lg overflow-hidden shadow-md h-full project-card">
+    <img class="w-full object-cover transition-transform transform-gpu duration-300" src="DissProj.png" alt="Randomly Generating Maze" />
+    <div class="p-6 flex flex-col">
+      <p class="font-bold text-xl mb-2">Networked Unity Application</p>
+      <p class="text-base">
+        My dissertation project focused on Networked Multiplayer Games. This project was done in Unity and used the Photon extension to host for free.
+      </p>
+      <a href="Project3.html" class="mt-4 bg-gray-800 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded block">View Project</a>
+    </div>
+  </div>
+
+  <!-- Project Card 4 -->
+  <div class="bg-gray-900 rounded-lg overflow-hidden shadow-md h-full project-card">
+    <img class="w-full object-cover transition-transform transform-gpu duration-300" src="Webdev.png" alt="Randomly Generating Maze" />
+    <div class="p-6 flex flex-col">
+      <p class="font-bold text-xl mb-2">Website Development</p>
+      <p class="text-base">
+        This project involved the creation of this website with vanilla HTML, CSS, and elements of JavaScript using the Tailwind framework.
+      </p>
+      <a href="Project4.html" class="mt-4 bg-gray-800 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded block">View Project</a>
+    </div>
+  </div>
+</div>
+</div>
+</div>
 
     <!-- Footer for Social Links -->
     <footer class="mt-8">

@@ -438,7 +438,28 @@ label {
   /*clip-path: polygon(0% 15%, 100% 2%, 100% 100%, 0% 90%, 0% 20%);*/
 }
 
-/* Form Styles */
+/* Styles for the outer container */
+.hover-container {
+  height: 60%;
+}
+
+.project-card {
+  transition: transform 0.8s;
+}
+
+.project-card:hover {
+  height: 100%;
+}
+
+.project-card:hover img {
+  height: 55%;
+  transition: height 0.8s;
+}
+
+.project-card img {
+  height: 30%;
+  transition: height 0.8s;
+}
 
 input[type="text"],
 select,
