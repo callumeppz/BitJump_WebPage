@@ -26,6 +26,27 @@
     />
     <link rel="stylesheet" href="input.css" />
     <link rel="stylesheet" href="output.css" />
+    <style>
+      .iframe-container {
+      position: fixed;
+      bottom: 2%;
+      left: 10%;
+      opacity: 0.5;
+      transform: translateX(-50%);
+      height: 20%;
+      box-shadow: 0 20px 80px rgba(0,0,0,.6);
+      border-radius: 5px;
+      overflow: hidden;
+      border: none;
+      z-index: 999; 
+      transition: opacity 0.3s ease, height 0.3s ease; 
+    }
+
+    .iframe-container:hover {
+      height: 50%; 
+      opacity: 1;
+    }
+    </style>
   </head>
 
 
@@ -125,6 +146,10 @@
         </div>
       </div>
     </main>
+
+    <div class="iframe-container">
+      <iframe src="https://landbot.online/v3/H-2129949-TJ31ZNMOOOGHCJOV/index.html" style="width: 400px;height: 620px;box-shadow: 0 20px 80px rgba(0,0,0,.6);border-radius: 5px;overflow: hidden;border: none; display: inline-block;"></iframe>
+    </div>
 
     <!-- Project Container -->
 
