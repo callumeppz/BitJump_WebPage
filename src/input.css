@@ -21,14 +21,14 @@ body * {
 
 :where(body) {
   --background-color: #ceabff;
-  --text-color: #000000;
+  --text-color: #fe9d00;
   color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :where(body) {
-    --background-color: hsl(231, 25%, 16%);
-    --text-color: #c7bcfe;
+    --background-color: hsl(230, 49%, 18%);
+    --text-color: #f49703;
   }
 }
 
@@ -120,14 +120,14 @@ main {
 
 /* Slider Animation */
 .slider-thumb::before {
-  border: 8px solid rgb(17 24 39); /* Added style ('solid') and color ('#000000') */
+  border: 8px solid rgb(255, 153, 0); /* Added style ('solid') and color ('#000000') */
   position: absolute;
   content: "";
-  left: 50%;
-  top: 0;
-  width: 1200px;
+  right: 2%;
+  top: 70%;
+  width: 1400px;
   height: 1200px;
-  background: #9e9ef2;
+  background: #161654;
   border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
   will-change: border-radius, transform, opacity;
   animation: sliderShape 5s linear infinite;
@@ -172,7 +172,7 @@ h1:hover {
 
 h2 {
   font-size: 50px;
-  color: #d2b6f7;
+  color: #f2a200;
   transition: transform 0.3s;
   text-shadow: 2px 0 transparent, -2px 0 transparent, 0 2px #866bd7,
     0 -2px #000000, 1px 1px #5113e2, -1px -1px #3a14e4, 1px -1px #4010f0,
@@ -221,13 +221,12 @@ p {
 
 .welcome-text {
   display: flex;
-  justify-content: left;
-  align-items: left; /* Center vertically and horizontally */
-  padding: 30px;
-  padding-top: 100px;
+  justify-content: center;
+  align-items: center; /* Center vertically and horizontally */
+  padding-bottom: 120px;
   transition: 0.3s;
   font-size: inherit;
-  min-height: 90vh; /* Increase the minimum height */
+
 }
 
 /* Header Styles */
@@ -239,21 +238,21 @@ p {
 }
 
 h2 {
-  background-color: rgba(70, 70, 70, 0.8);
+  background-color: rgba(0, 4, 255, 0.8);
   padding: 100px;
   background-image: url(/Images/Computer.jpg);
 }
 
 h2:hover {
   transform: scale(1.05);
-  background-color: rgba(70, 70, 70, 1);
+  background-color: rgb(43, 0, 255);
   transition: transform 0.4s;
 }
 
 /* Article Text Styles */
 
 .article-text {
-  background-color: rgb(17 24 39);
+  background-color: rgb(5, 84, 255);
   border: 10px;
   border-radius: 10px;
   padding: 10px;
@@ -268,9 +267,9 @@ h2:hover {
 .article-text:hover {
   transition: 1.2s;
   transform: scale(1.05);
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(0, 25, 249);
   opacity: 100;
-  box-shadow: rgba(255, 255, 255, 0.8) 0 0 4px 4px;
+  box-shadow: rgba(25, 0, 255, 0.8) 0 0 4px 4px;
 }
 
 /* Button Styles */
@@ -294,7 +293,7 @@ h2:hover {
 /* Project Container Styles */
 
 .flex-row {
-  background-color: #050ef9;
+  background-color: #010aff;
   display: flex;
   flex-direction: column-reverse; /* Set flex direction to column */
   align-items: center; /* Align items at the center horizontally */
@@ -315,7 +314,7 @@ h2:hover {
 /* Style for the project container */
 .project-row {
   border-width: 20px;
-  border-color: #9e9ef2;
+  border-color: #0b0bea;
   height: inherit;
   padding: 0px;
   /* Your styles for the entire container */
@@ -329,7 +328,7 @@ h2:hover {
 }
 
 .Info {
-  background-color: hsl(231, 25%, 16%);
+  background-color: hsl(231, 61%, 36%);
   display: flex;
   flex-direction: column-reverse; /* Set flex direction to column */
   align-items: center; /* Align items at the center horizontally */
@@ -356,7 +355,7 @@ h2:hover {
 .TRIAL1,
 .TRIAL2,
 .TRIAL3 {
-  background-color: hsl(231, 25%, 16%);
+  background-color: hsl(231, 61%, 36%);
   border-radius: 20px;
   border-color: #9e9ef2;
   width: auto;
@@ -367,7 +366,7 @@ h2:hover {
 /* Dropdown styles */
 #dropdown-products {
   display: none;
-  background-color: hsl(231, 25%, 16%);
+  background-color: hsl(231, 61%, 36%);
   transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out; /* Adding transition for opacity and height */
   opacity: 0;
   height: 0;
@@ -379,7 +378,7 @@ h2:hover {
   height: auto; /* Set height to auto on hover or when checked */
   opacity: 1;
   transition: 0.9s; /* Adding transition for opacity */
-  background-color: rgb(17 24 39);
+  background-color: hsl(231, 61%, 36%);
   margin: 10px;
   border-radius: 10px;
   transition: 1s;
@@ -417,11 +416,11 @@ label {
   transition: 1.2s;
   background-color: rgb(17 24 39);
   padding: 1rem, 1rem; /* Adjust the initial and hover padding as needed */
-  background-color: rgb(118, 10, 233);
+  background-color: rgb(10, 32, 233);
 }
 
 .CV {
-  background-color: rgb(197, 191, 255);
+  background-color: rgb(25, 0, 255);
   margin-left: 100px;
   padding: 100px;
 }
@@ -507,3 +506,4 @@ textarea {
   font-size: 20px;
   background-color: rgb(17 24 39);
 }
+

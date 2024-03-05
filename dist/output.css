@@ -572,6 +572,11 @@ video {
   position: fixed;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .my-4 {
   margin-top: 1rem;
   margin-bottom: 1rem;
@@ -583,6 +588,10 @@ video {
 
 .mb-2 {
   margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
 }
 
 .mt-4 {
@@ -663,12 +672,6 @@ video {
   margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
-.space-y-4 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(1rem * var(--tw-space-y-reverse));
-}
-
 .space-y-8 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
@@ -687,17 +690,8 @@ video {
   border-radius: 0.5rem;
 }
 
-.rounded-md {
-  border-radius: 0.375rem;
-}
-
 .border {
   border-width: 1px;
-}
-
-.bg-blue-900 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(30 58 138 / var(--tw-bg-opacity));
 }
 
 .bg-gray-800 {
@@ -708,11 +702,6 @@ video {
 .bg-gray-900 {
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
-}
-
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .object-cover {
@@ -748,11 +737,6 @@ video {
 
 .text-center {
   text-align: center;
-}
-
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
 }
 
 .text-4xl {
@@ -792,6 +776,10 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration-line: underline;
 }
 
 .shadow-md {
@@ -849,14 +837,14 @@ body * {
 
 :where(body) {
   --background-color: #ceabff;
-  --text-color: #000000;
+  --text-color: #fe9d00;
   color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :where(body) {
-    --background-color: hsl(231, 25%, 16%);
-    --text-color: #c7bcfe;
+    --background-color: hsl(230, 49%, 18%);
+    --text-color: #f49703;
   }
 }
 
@@ -955,15 +943,15 @@ main {
 /* Slider Animation */
 
 .slider-thumb::before {
-  border: 8px solid rgb(17 24 39);
+  border: 8px solid rgb(255, 153, 0);
   /* Added style ('solid') and color ('#000000') */
   position: absolute;
   content: "";
-  left: 50%;
-  top: 0;
-  width: 1200px;
+  right: 2%;
+  top: 70%;
+  width: 1400px;
   height: 1200px;
-  background: #9e9ef2;
+  background: #161654;
   border-radius: 62% 47% 82% 35% / 45% 45% 80% 66%;
   will-change: border-radius, transform, opacity;
   animation: sliderShape 5s linear infinite;
@@ -1010,7 +998,7 @@ h1:hover {
 }
 
 h2 {
-  color: #d2b6f7;
+  color: #f2a200;
   transition: transform 0.3s;
   text-shadow: 2px 0 transparent, -2px 0 transparent, 0 2px #866bd7,
     0 -2px #000000, 1px 1px #5113e2, -1px -1px #3a14e4, 1px -1px #4010f0,
@@ -1058,15 +1046,12 @@ p {
 
 .welcome-text {
   display: flex;
-  justify-content: left;
-  align-items: left;
+  justify-content: center;
+  align-items: center;
   /* Center vertically and horizontally */
-  padding: 30px;
-  padding-top: 100px;
+  padding-bottom: 120px;
   transition: 0.3s;
   font-size: inherit;
-  min-height: 90vh;
-  /* Increase the minimum height */
 }
 
 /* Header Styles */
@@ -1079,21 +1064,21 @@ p {
 }
 
 h2 {
-  background-color: rgba(70, 70, 70, 0.8);
+  background-color: rgba(0, 4, 255, 0.8);
   padding: 100px;
   background-image: url(/Images/Computer.jpg);
 }
 
 h2:hover {
   transform: scale(1.05);
-  background-color: rgba(70, 70, 70, 1);
+  background-color: rgb(43, 0, 255);
   transition: transform 0.4s;
 }
 
 /* Article Text Styles */
 
 .article-text {
-  background-color: rgb(17 24 39);
+  background-color: rgb(5, 84, 255);
   border: 10px;
   border-radius: 10px;
   padding: 10px;
@@ -1108,9 +1093,9 @@ h2:hover {
 .article-text:hover {
   transition: 1.2s;
   transform: scale(1.05);
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(0, 25, 249);
   opacity: 100;
-  box-shadow: rgba(255, 255, 255, 0.8) 0 0 4px 4px;
+  box-shadow: rgba(25, 0, 255, 0.8) 0 0 4px 4px;
 }
 
 /* Button Styles */
@@ -1136,7 +1121,7 @@ h2:hover {
 /* Project Container Styles */
 
 .flex-row {
-  background-color: #050ef9;
+  background-color: #010aff;
   display: flex;
   flex-direction: column-reverse;
   /* Set flex direction to column */
@@ -1161,7 +1146,7 @@ h2:hover {
 
 .project-row {
   border-width: 20px;
-  border-color: #9e9ef2;
+  border-color: #0b0bea;
   height: inherit;
   padding: 0px;
   /* Your styles for the entire container */
@@ -1175,7 +1160,7 @@ h2:hover {
 }
 
 .Info {
-  background-color: hsl(231, 25%, 16%);
+  background-color: hsl(231, 61%, 36%);
   display: flex;
   flex-direction: column-reverse;
   /* Set flex direction to column */
@@ -1205,7 +1190,7 @@ h2:hover {
 .TRIAL1,
 .TRIAL2,
 .TRIAL3 {
-  background-color: hsl(231, 25%, 16%);
+  background-color: hsl(231, 61%, 36%);
   border-radius: 20px;
   border-color: #9e9ef2;
   width: auto;
@@ -1217,7 +1202,7 @@ h2:hover {
 
 #dropdown-products {
   display: none;
-  background-color: hsl(231, 25%, 16%);
+  background-color: hsl(231, 61%, 36%);
   transition: opacity 0.3s ease-in-out, height 0.3s ease-in-out;
   /* Adding transition for opacity and height */
   opacity: 0;
@@ -1231,7 +1216,7 @@ h2:hover {
   /* Set height to auto on hover or when checked */
   opacity: 1;
   /* Adding transition for opacity */
-  background-color: rgb(17 24 39);
+  background-color: hsl(231, 61%, 36%);
   margin: 10px;
   border-radius: 10px;
   transition: 1s;
@@ -1270,11 +1255,11 @@ label {
   background-color: rgb(17 24 39);
   padding: 1rem, 1rem;
   /* Adjust the initial and hover padding as needed */
-  background-color: rgb(118, 10, 233);
+  background-color: rgb(10, 32, 233);
 }
 
 .CV {
-  background-color: rgb(197, 191, 255);
+  background-color: rgb(25, 0, 255);
   margin-left: 100px;
   padding: 100px;
 }
@@ -1364,9 +1349,19 @@ textarea {
   background-color: rgb(17 24 39);
 }
 
+.hover\:bg-blue-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-purple-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(126 34 206 / var(--tw-bg-opacity));
+}
+
+.hover\:text-orange-300:hover {
+  --tw-text-opacity: 1;
+  color: rgb(253 186 116 / var(--tw-text-opacity));
 }
 
 .hover\:text-purple-300:hover {
@@ -1539,3 +1534,4 @@ textarea {
     line-height: 1.25rem;
   }
 }
+
