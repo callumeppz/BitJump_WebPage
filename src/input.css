@@ -172,7 +172,7 @@ h1:hover {
 
 h2 {
   font-size: 50px;
-  color: #f2a200;
+  color: #f2e200;
   transition: transform 0.3s;
   text-shadow: 2px 0 transparent, -2px 0 transparent, 0 2px #866bd7,
     0 -2px #000000, 1px 1px #5113e2, -1px -1px #3a14e4, 1px -1px #4010f0,
@@ -466,6 +466,8 @@ label {
   transition: height 0.8s;
 }
 
+
+
 input[type="text"],
 select,
 textarea {
@@ -506,4 +508,3 @@ textarea {
   font-size: 20px;
   background-color: rgb(17 24 39);
 }
-
