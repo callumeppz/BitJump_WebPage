@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Germany Trip 2025: Hamburg</title>
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="dist/github.png">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="GermanyStyle.css">
+    <style>
+
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modeToggle = document.getElementById('mode-toggle');
+
+            modeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('light-mode');
+            });
+        });
+
+        function toggleDropdown(id) {
+            var content = document.getElementById(id);
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        }
+    </script>
+</head>
+
+</head>
+<body>
+    <button id="mode-toggle" class="mode-button">Toggle Mode</button>
+
+    <h1>Germany Trip 2025: Hamburg</h1>
+    <p>This is our Hamburg trip planning page for 2025. Here you'll find all information about dates, flights, accommodations, transportation, and activities.</p>
+    
+    <div class="section">
+        <h2 style="color: green;">Trip Options & Dates</h2>
+        <p><strong>Dates:</strong> March 27th - 30th, 2025</p>
+        <p><strong>Dates:</strong> April 10th - 13th, 2025</p>
+        <p>WE CAN LOOK FOR MORE TOO, ONLY WHAT I'VE HAD A QUICK LOOK AT</p>
+        <div class="green-button">Option 1: 3 Nights ($185pp)</div>
+        <div class="green-button">Option 2: 2 Nights ($110-119pp)</div>
+    </div>
+
+    <div class="section">
+        <h2 style="color: #0099ff;">Transportation</h2>
+        <button class="dropdown" onclick="toggleDropdown('transport1')">&#x25BC; Flight Details</button>
+        <div id="transport1" class="dropdown-content">Flight information will be added here.
+            <li><strong>Airline: Ryanair</strong></li>
+            <li><strong>Route: Stansted - Hamburg</strong></li>
+            <li><strong>Cost: $44 Return (March 27th-29th)</strong></li>
+            <li><strong>Cost: $44 Return (March 26th-29th)</strong></li>
+            <li><strong>Cost: $74 Return (March 26th-29th)</strong></li>
+            <img src="ryanair.png" alt="flights">
+        </div>
+        <button class="dropdown" onclick="toggleDropdown('transport2')">&#x25BC; Airport Parking</button>
+        <div id="transport2" class="dropdown-content">Parking details will be added here.
+            <li><strong>Location: Maple Park (20% off with work discount)</strong></li>
+            <li><strong>Total Cost: $43</strong></li>
+            <li><strong>Per Person: $8-10.50 pp (for Aylesbury/Reading people, 4-5 in car)</strong></li>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 style="color: orange;">Accommodations</h2>
+        <button class="dropdown" onclick="toggleDropdown('accom1')">&#x25BC; 2-Night Options</button>
+        <div id="accom1" class="dropdown-content">Details about 2-night stay options.
+            <li><strong>- Thursday-Saturday: $66-77pp (Either 3 twin rooms or 2 triple rooms)</strong></li>
+            <li><strong>- Friday-Sunday: $99pp (3 twin rooms)</strong></li>
+            <img src="cosmos2.png" alt="hotel 1">
+        </div>
+        <button class="dropdown" onclick="toggleDropdown('accom2')">&#x25BC; 3-Night Options</button>
+        <div id="accom2" class="dropdown-content">Details about 3-night stay options.
+            <li><strong>- ($130-135 pp, 3 twin double rooms) Hotel Cosmos</strong></li>
+            <img src="cosmos.png" alt="hotel 2">
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 style="color: purple;">Activities & Attractions</h2>
+        <h3>Entertainment</h3>
+        <ul>
+            <li><strong>- Fair Grouund/Amusement</strong> - litre steins</li>
+            <li><strong>- Schmidt Tivoli - Theatre tour with beers and views ($5)</strong></li>
+            <li><strong>- Beer Boat tour of Hamburg</strong></li>
+            <li><strong>- Mönkebergstrasse - food/drink venues along the river</strong></li>
+        </ul>
+        <h3>Food & Drink</h3>
+        <ul>
+            <li><strong>- Bierhaus</strong> - litre steins</li>
+            <li><strong>- Brewery tour</strong></li>
+            <li><strong>- Bar district for great nightlife</strong></li>
+            <li><strong>- Beer pong</strong></li>
+        </ul>
+    </div>
+</div>
+
+        <div class="section">
+            <h2 style="color: rgb(0, 255, 149);">MAYBE'S</h2>
+            <h3>Potential Spendings</h3>
+            <ul>
+                <li><strong>Airport Longue: $28 PP, unlimited drinks, unlimited food. 3 Hours. </strong></li>
+                <li><strong>- SPA ($30) 2/3hours</strong></li>
+                <li><strong>- Beer Boat tour of Hamburg</strong></li>
+                <li><strong>- Mönkebergstrasse - food/drink venues along the river</strong></li>
+            </ul>
+    </div>
+</body>
+</html>
