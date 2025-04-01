@@ -161,11 +161,13 @@
 
   <!-- Sidebar Navigation for Desktop (Itinerary) -->
   <nav id="sidebar" class="hidden md:block">
+    <a href="#flights" class="hover:bg-indigo-600">Flights</a>
     <a href="#tokyo" class="hover:bg-indigo-600">Tokyo</a>
     <a href="#hakone" class="hover:bg-indigo-600">Hakone</a>
     <a href="#osaka" class="hover:bg-indigo-600">Osaka</a>
     <a href="#kyoto" class="hover:bg-indigo-600">Kyoto</a>
     <a href="#hiroshima" class="hover:bg-indigo-600">Hiroshima</a>
+    <a href="#transport-links" class="hover:bg-indigo-600">Transport Links</a>
   </nav>
 
 <!-- Main Content: Itinerary Sections -->
@@ -174,9 +176,81 @@
   <section class="text-center mb-12" data-aos="fade-up">
     <h2 class="text-4xl font-bold">Japan Trip 2025</h2>
     <p class="mt-4 text-lg">
-      Your essential guide with transport details and top hotel recommendations.
+      Itinerary for Japan 2025, prices and flight TBD.
     </p>
   </section>
+
+<!-- Flight Details Section -->
+<section id="flights" class="section-card p-6 mb-8 border rounded shadow dark:border-gray-600 bg-gray-900 text-white" data-aos="fade-up">
+  <h2 class="text-3xl font-bold text-indigo-300 mb-4">London ↔ Tokyo Flights</h2>
+  
+  <!-- Round-Trip Flight Details Table -->
+  <div class="overflow-x-auto">
+    <table class="w-full table-auto text-white">
+      <thead>
+        <tr class="bg-gray-700">
+          <th class="border p-2">Flight</th>
+          <th class="border p-2">Leg</th>
+          <th class="border p-2">From</th>
+          <th class="border p-2">To</th>
+          <th class="border p-2">Departure</th>
+          <th class="border p-2">Arrival</th>
+          <th class="border p-2">Stops</th>
+          <th class="border p-2">Duration</th>
+          <th class="border p-2">Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Outbound Flight -->
+        <tr class="hover:bg-indigo-600">
+          <td class="border p-2">CA123</td>
+          <td class="border p-2">Outbound</td>
+          <td class="border p-2">London Gatwick (LGW)</td>
+          <td class="border p-2">Tokyo Narita (NRT)</td>
+          <td class="border p-2">April 2025<br>09:30</td>
+          <td class="border p-2">April 2025<br>23:30</td>
+          <td class="border p-2">1 Stop<br>(via Beijing)</td>
+          <td class="border p-2">14h 00m</td>
+          <td class="border p-2"></td>
+        </tr>
+        <!-- Return Flight -->
+        <tr class="hover:bg-indigo-600">
+          <td class="border p-2">CA124</td>
+          <td class="border p-2">Return</td>
+          <td class="border p-2">Tokyo Narita (NRT)</td>
+          <td class="border p-2">London Gatwick (LGW)</td>
+          <td class="border p-2">April 2025<br>11:00</td>
+          <td class="border p-2">April 2025<br>21:00</td>
+          <td class="border p-2">1 Stop<br>(via Beijing)</td>
+          <td class="border p-2">14h 00m</td>
+          <td class="border p-2"></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <!-- Flight Route Map -->
+  <div class="mt-6">
+    <h3 class="text-2xl font-semibold text-indigo-300 mb-2">Flight Route Map</h3>
+    <a href="https://www.google.com/maps/dir/?api=1&origin=London+Gatwick&destination=Tokyo+Narita&travelmode=flight" target="_blank" rel="noopener noreferrer">
+      <img src="https://via.placeholder.com/600x300?text=London+to+Tokyo+Route+Map" alt="London to Tokyo Flight Route Map" class="w-full rounded shadow-md">
+    </a>
+  </div>
+  
+  <!-- Call-to-Action Buttons -->
+  <div class="mt-6 flex flex-col sm:flex-row justify-center items-center gap-4">
+    <a href="https://www.airchina.co.uk/GB/GB/Home" target="_blank" rel="noopener noreferrer" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded transition">
+      Book with Air China
+    </a>
+    <a href="https://www.airchina.co.uk/GB/GB/info/flight-status/" target="_blank" rel="noopener noreferrer" class="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded transition">
+      Check Flight Status
+    </a>
+  </div>
+</section>
+
+
+
+
 
   <!-- Tokyo Section -->
   <section id="tokyo" class="section-card p-6 mb-8 border rounded shadow" data-aos="fade-right">
