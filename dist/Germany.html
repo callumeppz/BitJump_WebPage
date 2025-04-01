@@ -1,162 +1,794 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <title>Germany Trip 2025: Hamburg</title>
-    <meta name="robots" content="index, follow">
-    <link rel="icon" href="dist/github.png">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="GermanyStyle.css">
-    <style>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+  />
+  <title>Japan Trip 2025: Tokyo & Beyond</title>
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" href="dist/github.png" />
 
-    </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const modeToggle = document.getElementById('mode-toggle');
+  <!-- Tailwind CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 
-            modeToggle.addEventListener('click', () => {
-                document.body.classList.toggle('light-mode');
-            });
-        });
+  <!-- Additional CSS -->
+  <link rel="stylesheet" href="GermanyStyle.css" />
 
-        function toggleDropdown(id) {
-            var content = document.getElementById(id);
-            content.style.display = content.style.display === 'block' ? 'none' : 'block';
-        }
-    </script>
+  <!-- Swiper CSS for Hero & Gallery Sliders -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- AOS for scroll animations -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+
+  <style>
+    /* Smooth scroll */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Section cards with darker grey background (Copilot-like) */
+    .section-card {
+      background-color: #2d2d2d;
+      color: #edf2f7;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+      border-radius: 0.5rem;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+
+    /* Light/Dark mode styling */
+    body.light-mode {
+      background-color: #f7fafc;
+      color: #2d3748;
+    }
+    body:not(.light-mode) {
+      background-color: #2d3748;
+      color: #edf2f7;
+    }
+
+    /* Sidebar (desktop only) */
+    #sidebar {
+      position: fixed;
+      top: 40%;
+      left: 1rem;
+    }
+    #sidebar a {
+      display: block;
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+      background: rgba(55, 65, 81, 0.7);
+      color: #fff;
+      border-radius: 0.375rem;
+      transition: background 0.3s;
+    }
+    #sidebar a:hover {
+      background: rgba(99, 102, 241, 0.8);
+    }
+
+    /* Back-to-top button */
+    #back-to-top {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background: #4a5568;
+      color: white;
+      padding: 0.75rem 1rem;
+      border-radius: 0.375rem;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+      z-index: 50;
+    }
+    #back-to-top:hover {
+      background: #2d3748;
+      transform: translateY(-5px);
+    }
+
+    /* Modal styling */
+    .modal-overlay {
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    /* Hero slider overlay text */
+    .hero-overlay {
+      background: rgba(0, 0, 0, 0.35);
+    }
+
+    /* FAQ Accordion */
+    .faq-question {
+      cursor: pointer;
+    }
+    .faq-answer {
+      display: none;
+    }
+  </style>
+
+  <script>
+    // Modal functions: open and close modals by ID
+    function openModal(modalId) {
+      document.getElementById(modalId).classList.remove("hidden");
+    }
+    function closeModal(modalId) {
+      document.getElementById(modalId).classList.add("hidden");
+    }
+  </script>
 </head>
-
-</head>
-<body>
-
-    <header>
-    <nav
-      class="nav flex-item text-center space-x-1 sm:space-x-2 md:space-x-3 lg:space-x-4"
-    >
-      <a href="index.html">
-        <button
-          class="tablinks bg-gray-900 hover:text-orange-300 focus:outline-none focus:shadow-outline-purple transition-transform duration-300 transform active:scale-95 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm"
-        >
-          Home
+<body class="min-h-screen">
+  <!-- Header Navigation -->
+  <header class="bg-gray-900 text-white p-4 sticky top-0 z-50 shadow-md">
+    <div class="container mx-auto flex items-center justify-between">
+      <!-- Branding -->
+      <div class="flex items-center space-x-4">
+        <div class="text-lg font-bold">Japan Trip 2025</div>
+        <!-- Language Selector -->
+      </div>
+      <!-- Desktop Navigation -->
+      <nav class="hidden md:flex space-x-4">
+        <a href="index.html" class="hover:text-orange-300 transition-colors">Home</a>
+        <a href="About.html" class="hover:text-orange-300 transition-colors">About</a>
+        <a href="ContactME.html" class="hover:text-orange-300 transition-colors">Contact Me</a>
+        <a href="https://github.com/callumeppz" target="_blank" class="hover:text-orange-300 transition-colors">GitHub</a>
+        <a href="Japan.html" class="hover:text-orange-300 transition-colors">Japan Trip (Temp)</a>
+      </nav>
+      <div class="flex items-center space-x-4">
+        <!-- Mode Toggle -->
+        <button id="mode-toggle" class="bg-gray-700 hover:bg-gray-600 px-3 py-2 rounded">
+          Toggle Mode
         </button>
-      </a>
-      
-
-      <a href="About.html">
-        <button
-          class="tablinks bg-gray-900 hover:text-orange-300 focus:outline-none focus:shadow-outline-purple transition-transform duration-300 transform active:scale-95 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm"
-        >
-          About
+        <!-- Hamburger Menu for Mobile -->
+        <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
         </button>
-      </a>
-      <a href="ContactME.html">
-        <button
-          class="tablinks bg-gray-900 hover:text-orange-300 focus:outline-none focus:shadow-outline-purple transition-transform duration-300 transform active:scale-95 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm"
-        >
-          Contact Me
-        </button>
-      </a>
-      <a
-        class="self-left"
-        target="_blank"
-        href="https://github.com/callumeppz"
-      >
-        <button
-          class="tablinks bg-gray-900 hover:text-orange-300 focus:outline-none focus:shadow-outline-purple transition-transform duration-300 transform active:scale-95 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm"
-        >
-          GitHub
-        </button>
-      </a>
-
-      <a href="Germany.html">
-        <button
-          class="tablinks bg-gray-900 hover:text-orange-300 focus:outline-none focus:shadow-outline-purple transition-transform duration-300 transform active:scale-95 text-xs sm:text-xs md:text-sm lg:text-sm xl:text-sm"
-        >
-          Germany (Temp)
-        </button>
-      </a>
+      </div>
+    </div>
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu" class="md:hidden hidden mt-4">
+      <div class="flex flex-col space-y-2">
+        <a href="index.html" class="block text-white hover:text-orange-300 transition-colors">Home</a>
+        <a href="About.html" class="block text-white hover:text-orange-300 transition-colors">About</a>
+        <a href="ContactME.html" class="block text-white hover:text-orange-300 transition-colors">Contact Me</a>
+        <a href="https://github.com/callumeppz" target="_blank" class="block text-white hover:text-orange-300 transition-colors">GitHub</a>
+        <a href="Japan.html" class="block text-white hover:text-orange-300 transition-colors">Japan Trip (Temp)</a>
+      </div>
     </nav>
   </header>
 
-    <button id="mode-toggle" class="mode-button">Toggle Mode</button>
+  <!-- Sidebar Navigation for Desktop (Itinerary) -->
+  <nav id="sidebar" class="hidden md:block">
+    <a href="#tokyo" class="hover:bg-indigo-600">Tokyo</a>
+    <a href="#hakone" class="hover:bg-indigo-600">Hakone</a>
+    <a href="#osaka" class="hover:bg-indigo-600">Osaka</a>
+    <a href="#kyoto" class="hover:bg-indigo-600">Kyoto</a>
+    <a href="#hiroshima" class="hover:bg-indigo-600">Hiroshima</a>
+  </nav>
 
-    <h1>Germany Trip 2025: Hamburg</h1>
-    <p>This is our Hamburg trip planning page for 2025. Here you'll find all information about dates, flights, accommodations, transportation, and activities.</p>
-    
-    <div class="section">
-        <h2 style="color: green;">Trip Options & Dates</h2>
-        <p><strong>Dates:</strong> Thursday : Saturday $45</p>
-        <p><strong>Dates:</strong> March 27th - 29th, 2025</p>
-        <p><strong>Dates:</strong> April 3rd - 5th, 2025</p>
-        <p><strong>Dates:</strong> May 8th - 10th, 2025</p>
-        <p>WE CAN LOOK FOR MORE TOO, ONLY WHAT I'VE HAD A QUICK LOOK AT</p>
-        <div class="green-button">Option 1: 3 Nights ($185pp)</div>
-        <div class="green-button">Option 2: 2 Nights ($110-119pp)</div>
-    </div>
+<!-- Main Content: Itinerary Sections -->
+<main id="itinerary" class="container mx-auto px-4 py-6">
+  <!-- Intro Header -->
+  <section class="text-center mb-12" data-aos="fade-up">
+    <h2 class="text-4xl font-bold">Japan Trip 2025</h2>
+    <p class="mt-4 text-lg">
+      Your essential guide with transport details and top hotel recommendations.
+    </p>
+  </section>
 
-    <div class="section">
-        <h2 style="color: #0099ff;">Transportation</h2>
-        <button class="dropdown" onclick="toggleDropdown('transport1')">&#x25BC; Flight Details</button>
-        <div id="transport1" class="dropdown-content">Flight information will be added here.
-            <li><strong>Airline: Ryanair</strong></li>
-            <li><strong>Route: Stansted - Hamburg</strong></li>
-            <li><strong>Cost: $44 Return (March 27th-29th)</strong></li>
-            <li><strong>Cost: $44 Return (March 26th-29th)</strong></li>
-            <li><strong>Cost: $74 Return (March 26th-29th)</strong></li>
-            <img src="ryanair.png" alt="flights">
-        </div>
-        <button class="dropdown" onclick="toggleDropdown('transport2')">&#x25BC; Airport Parking</button>
-        <div id="transport2" class="dropdown-content">Parking details will be added here.
-            <li><strong>Location: Maple Park (20% off with work discount)</strong></li>
-            <li><strong>Total Cost: $43</strong></li>
-            <li><strong>Per Person: $8-10.50 pp (for Aylesbury/Reading people, 4-5 in car)</strong></li>
-        </div>
+  <!-- Tokyo Section -->
+  <section id="tokyo" class="section-card p-6 mb-8 border rounded shadow" data-aos="fade-right">
+    <h3 class="text-2xl font-bold text-green-600 mb-2">Tokyo (4 nights)</h3>
+    <div class="mb-4">
+      <h4 class="text-xl font-semibold">Location & Transport</h4>
+      <ul class="list-disc list-inside">
+        <li><strong>Airports:</strong> Narita / Haneda</li>
+        <li><strong>Transport:</strong> JR Lines, Tokyo Metro, Toei Subway</li>
+      </ul>
     </div>
-    
-    <div class="section">
-        <h2 style="color: orange;">Accommodations</h2>
-        <button class="dropdown" onclick="toggleDropdown('accom1')">&#x25BC; 2-Night Options</button>
-        <div id="accom1" class="dropdown-content">Details about 2-night stay options.
-            <li><strong>- Thursday-Saturday: $66-77pp (Either 3 twin rooms or 2 triple rooms)</strong></li>
-            <li><strong>- Friday-Sunday: $99pp (3 twin rooms)</strong></li>
-            <img src="cosmos2.png" alt="hotel 1">
-        </div>
-        <button class="dropdown" onclick="toggleDropdown('accom2')">&#x25BC; 3-Night Options</button>
-        <div id="accom2" class="dropdown-content">Details about 3-night stay options.
-            <li><strong>- ($130-135 pp, 3 twin double rooms) Hotel Cosmos</strong></li>
-            <img src="cosmos.png" alt="hotel 2">
-        </div>
+    <div class="mb-4">
+      <h4 class="text-xl font-semibold">Accommodation</h4>
+      <p class="mb-2">Booking.com picks:</p>
+      <ul class="list-disc list-inside">
+         <li><a href="https://www.booking.com/hotel/jp/ryumeikan-tokyo.html" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Hotel Ryumeikan Tokyo</a></li>
+         <li><a href="https://www.booking.com/hotel/jp/park-hyatt-tokyo.html" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Park Hyatt Tokyo</a></li>
+         <li><a href="https://www.booking.com/hotel/jp/the-tokyo-station-hotel.html" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">The Tokyo Station Hotel</a></li>
+      </ul>
+      <button onclick="window.open('https://www.google.com/maps/search/Hotels+in+Tokyo', '_blank')" 
+              class="mt-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition">
+        View on Map
+      </button>
     </div>
-    
-    <div class="section">
-        <h2 style="color: purple;">Activities & Attractions</h2>
-        <h3>Entertainment</h3>
-        <ul>
-            <li><strong>- Fair Ground/Amusement</strong></li>
-            <li><strong>- Schmidt Tivoli - Theatre tour with beers and views ($5)</strong></li>
-            <li><strong>- Beer Boat tour of Hamburg</strong></li>
-            <li><strong>- Mönkebergstrasse - food/drink venues along the river</strong></li>
-        </ul>
-        <h3>Food & Drink</h3>
-        <ul>
-            <li><strong>- Bierhaus</strong> - litre steins</li>
-            <li><strong>- Brewery tour</strong></li>
-            <li><strong>- Bar district for great nightlife</strong></li>
-            <li><strong>- Beer pong</strong></li>
-        </ul>
+    <div class="mb-4">
+      <h4 class="text-xl font-semibold">Daily Budget</h4>
+      <ul class="list-disc list-inside">
+        <li><strong>Transport:</strong> $10–15</li>
+      </ul>
+    </div>
+    <button onclick="openModal('modal-tokyo')" class="mt-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition">
+      More Info
+    </button>
+  </section>
+
+  <!-- Hakone Section -->
+  <section id="hakone" class="section-card p-6 mb-8 border rounded shadow" data-aos="fade-left">
+    <h3 class="text-2xl font-bold text-orange-500 mb-2">Hakone (1 night)</h3>
+    <div class="mb-4">
+      <h4 class="text-xl font-semibold">Location & Transport</h4>
+      <ul class="list-disc list-inside">
+        <li><strong>Access:</strong> Hakone Tozan Railway from Odawara</li>
+        <li><strong>Tip:</strong> Hakone Free Pass recommended</li>
+      </ul>
+    </div>
+    <div class="mb-4">
+      <h4 class="text-xl font-semibold">Accommodation</h4>
+      <ul class="list-disc list-inside">
+         <li><a href="https://www.booking.com/hotel/jp/yumoto-station-mirahakone.ja.html" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Yumoto Station Hotel MIRAHAKONE</a></li>
+         <li><a href="https://www.suimeisou.com/" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Hakone Suimeiso</a></li>
+      </ul>
+      <button onclick="window.open('https://www.google.com/maps/search/Hakone+Hotels', '_blank')" 
+              class="mt-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition">
+        View on Map
+      </button>
+    </div>
+    <div class="mb-4">
+      <h4 class="text-xl font-semibold">Daily Budget</h4>
+      <ul class="list-disc list-inside">
+        <li><strong>Transport:</strong> $40 (Hakone Free Pass)</li>
+      </ul>
+    </div>
+    <button onclick="openModal('modal-hakone')" class="mt-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition">
+      More Info
+    </button>
+  </section>
+
+  <!-- Osaka Section -->
+  <section id="osaka" class="section-card p-6 mb-8 border rounded shadow" data-aos="fade-right">
+    <h3 class="text-2xl font-bold text-blue-500 mb-2">Osaka (3 nights)</h3>
+    <div class="mb-4">
+      <h4 class="text-xl font-semibold">Location & Transport</h4>
+      <ul class="list-disc list-inside">
+        <li><strong>Station:</strong> Shin-Osaka</li>
+        <li><strong>Transport:</strong> Osaka Metro, JR Lines</li>
+      </ul>
+    </div>
+    <div class="mb-4">
+      <h4 class="text-xl font-semibold">Accommodation</h4>
+      <ul class="list-disc list-inside">
+         <li><a href="https://www.booking.com/hotel/jp/swissotel-nankai-osaka.html" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Swissôtel Nankai Osaka</a></li>
+         <li><a href="https://www.booking.com/hotel/jp/the-st-regis-osaka.html" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">The St. Regis Osaka</a></li>
+         <li><a href="https://www.booking.com/hotel/jp/cross-hotel-osaka.html" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Cross Hotel Osaka</a></li>
+      </ul>
+      <button onclick="window.open('https://www.google.com/maps/search/Hotels+in+Osaka', '_blank')" 
+              class="mt-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition">
+        View on Map
+      </button>
+    </div>
+    <div class="mb-4">
+      <h4 class="text-xl font-semibold">Daily Budget</h4>
+      <ul class="list-disc list-inside">
+        <li><strong>Transport:</strong> $8–12</li>
+      </ul>
+    </div>
+    <button onclick="openModal('modal-osaka')" class="mt-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition">
+      More Info
+    </button>
+  </section>
+
+  <!-- Kyoto Section -->
+  <section id="kyoto" class="section-card p-6 mb-8 border rounded shadow" data-aos="fade-left">
+    <h3 class="text-2xl font-bold text-purple-500 mb-2">Kyoto (3 nights)</h3>
+    <div class="mb-4">
+      <h4 class="text-xl font-semibold">Location & Transport</h4>
+      <ul class="list-disc list-inside">
+        <li><strong>Station:</strong> Kyoto Station</li>
+        <li><strong>Transport:</strong> Buses, Subway</li>
+      </ul>
+    </div>
+    <div class="mb-4">
+      <h4 class="text-xl font-semibold">Accommodation</h4>
+      <ul class="list-disc list-inside">
+         <li><a href="https://www.booking.com/hotel/jp/hotel-granvia-kyoto.html" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Hotel Granvia Kyoto</a></li>
+         <li><a href="https://www.booking.com/hotel/jp/the-ritz-carlton-kyoto.html" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">The Ritz-Carlton Kyoto</a></li>
+         <li><a href="https://www.booking.com/hotel/jp/kyoto-hotel-okura.html" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Kyoto Hotel Okura</a></li>
+      </ul>
+      <button onclick="window.open('https://www.google.com/maps/search/Hotels+in+Kyoto', '_blank')" 
+              class="mt-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition">
+        View on Map
+      </button>
+    </div>
+    <div class="mb-4">
+      <h4 class="text-xl font-semibold">Daily Budget</h4>
+      <ul class="list-disc list-inside">
+        <li><strong>Transport:</strong> $10–15</li>
+      </ul>
+    </div>
+    <button onclick="openModal('modal-kyoto')" class="mt-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition">
+      More Info
+    </button>
+  </section>
+
+  <!-- Hiroshima Section -->
+  <section id="hiroshima" class="section-card p-6 mb-8 border rounded shadow" data-aos="fade-right">
+    <h3 class="text-2xl font-bold mb-2" style="color: rgb(0, 255, 149);">Hiroshima (3 nights)</h3>
+    <div class="mb-4">
+      <h4 class="text-xl font-semibold">Location & Transport</h4>
+      <ul class="list-disc list-inside">
+        <li><strong>Station:</strong> Hiroshima Station</li>
+        <li><strong>Transport:</strong> Streetcar system</li>
+      </ul>
+    </div>
+    <div class="mb-4">
+      <h4 class="text-xl font-semibold">Accommodation</h4>
+      <ul class="list-disc list-inside">
+         <li><a href="https://www.booking.com/hotel/jp/sheraton-grand-hiroshima.html" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Sheraton Grand Hiroshima</a></li>
+         <li><a href="https://www.booking.com/hotel/jp/rihga-royal-hotel-hiroshima.html" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Rihga Royal Hotel Hiroshima</a></li>
+         <li><a href="https://www.booking.com/hotel/jp/hotel-granvia-hiroshima.html" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">Hotel Granvia Hiroshima</a></li>
+      </ul>
+      <button onclick="window.open('https://www.google.com/maps/search/Hotels+in+Hiroshima', '_blank')" 
+              class="mt-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition">
+        View on Map
+      </button>
+    </div>
+    <div class="mb-4">
+      <h4 class="text-xl font-semibold">Daily Budget</h4>
+      <ul class="list-disc list-inside">
+        <li><strong>Transport:</strong> $5–10</li>
+      </ul>
+    </div>
+    <button onclick="openModal('modal-hiroshima')" class="mt-2 bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition">
+      More Info
+    </button>
+  </section>
+</main>
+
+
+    <!-- Interactive Itinerary Timeline -->
+    <section id="timeline" class="container mx-auto px-4 py-12" data-aos="fade-up">
+      <h2 class="text-3xl font-bold text-center mb-6">Your Itinerary Timeline</h2>
+      <div class="relative border-l-4 border-orange-500 ml-4">
+        <!-- Timeline item -->
+        <div class="mb-8 ml-6">
+          <div class="absolute w-4 h-4 bg-orange-500 rounded-full -left-2 top-1"></div>
+          <h3 class="text-xl font-semibold">Day 1: Arrival in Tokyo</h3>
+          <p class="mt-2 text-gray-300">Land at Narita or Haneda, check in to your hotel, and get acquainted with the bustling city life.</p>
+        </div>
+        <!-- Timeline item -->
+        <div class="mb-8 ml-6">
+          <div class="absolute w-4 h-4 bg-orange-500 rounded-full -left-2 top-1"></div>
+          <h3 class="text-xl font-semibold">Day 2: Tokyo Exploration</h3>
+          <p class="mt-2 text-gray-300">Visit iconic sites, bustling markets, and vibrant neighborhoods in Tokyo.</p>
+        </div>
+        <!-- Timeline item -->
+        <div class="mb-8 ml-6">
+          <div class="absolute w-4 h-4 bg-orange-500 rounded-full -left-2 top-1"></div>
+          <h3 class="text-xl font-semibold">Day 3: Hakone Getaway</h3>
+          <p class="mt-2 text-gray-300">Take a scenic train ride to Hakone, relax in onsen baths, and view Mount Fuji.</p>
+        </div>
+        <!-- Timeline item -->
+        <div class="mb-8 ml-6">
+          <div class="absolute w-4 h-4 bg-orange-500 rounded-full -left-2 top-1"></div>
+          <h3 class="text-xl font-semibold">Day 4 & 5: Osaka Adventure</h3>
+          <p class="mt-2 text-gray-300">Savor Osaka’s culinary delights and explore its vibrant nightlife.</p>
+        </div>
+        <!-- Timeline item -->
+        <div class="ml-6">
+          <div class="absolute w-4 h-4 bg-orange-500 rounded-full -left-2 top-1"></div>
+          <h3 class="text-xl font-semibold">Day 6-8: Kyoto & Hiroshima</h3>
+          <p class="mt-2 text-gray-300">Experience Kyoto’s cultural heritage and Hiroshima’s poignant history.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Back to Top Button -->
+  <div id="back-to-top" 
+       onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" 
+       class="fixed bottom-4 right-4 bg-indigo-600 text-white px-3 py-1 rounded transition hover:bg-indigo-700">
+    ↑ Top
+  </div>
+  
+</main>
+
+<!-- Back to Top Button -->
+<div id="back-to-top" 
+     onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" 
+     class="fixed bottom-4 right-4 bg-indigo-600 text-white px-3 py-1 rounded transition hover:bg-indigo-700">
+  ↑ Top
+</div>
+
+
+    <!-- Intercity Transport Links Section -->
+    <section id="transport-links" class="mb-12 bg-indigo-100 dark:bg-gray-700 p-6 rounded-lg shadow-lg">
+      <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">Intercity Transport Links</h3>
+      <table class="w-full table-auto text-gray-800 dark:text-gray-200">
+        <thead>
+          <tr class="bg-gray-300 dark:bg-gray-600">
+            <th class="border-b border-gray-400 pb-2 text-left px-2">From</th>
+            <th class="border-b border-gray-400 pb-2 text-left px-2">To</th>
+            <th class="border-b border-gray-400 pb-2 text-left px-2">Line/Method</th>
+            <th class="border-b border-gray-400 pb-2 text-left px-2">Time</th>
+            <th class="border-b border-gray-400 pb-2 text-left px-2">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hover:bg-indigo-200 dark:hover:bg-gray-600">
+            <td class="py-2 px-2">Tokyo</td>
+            <td class="py-2 px-2">Hakone</td>
+            <td class="py-2 px-2">Odakyu Romancecar + Tozan Railway</td>
+            <td class="py-2 px-2">90 min</td>
+            <td class="py-2 px-2">¥2,910</td>
+          </tr>
+          <tr class="hover:bg-indigo-200 dark:hover:bg-gray-600">
+            <td class="py-2 px-2">Hakone</td>
+            <td class="py-2 px-2">Osaka</td>
+            <td class="py-2 px-2">Shinkansen</td>
+            <td class="py-2 px-2">150 min</td>
+            <td class="py-2 px-2">¥13,500</td>
+          </tr>
+          <tr class="hover:bg-indigo-200 dark:hover:bg-gray-600">
+            <td class="py-2 px-2">Osaka</td>
+            <td class="py-2 px-2">Kyoto</td>
+            <td class="py-2 px-2">JR Special Rapid</td>
+            <td class="py-2 px-2">30 min</td>
+            <td class="py-2 px-2">¥560</td>
+          </tr>
+          <tr class="hover:bg-indigo-200 dark:hover:bg-gray-600">
+            <td class="py-2 px-2">Kyoto</td>
+            <td class="py-2 px-2">Hiroshima</td>
+            <td class="py-2 px-2">Shinkansen</td>
+            <td class="py-2 px-2">105 min</td>
+            <td class="py-2 px-2">¥11,000</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <!-- Back to Top Button -->
+  <div id="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" 
+       class="fixed bottom-6 right-6 bg-indigo-600 hover:bg-indigo-700 transition text-white px-4 py-2 rounded-full shadow-lg">
+    ↑ Top
+  </div>
+
+  <!-- City Modals -->
+  <!-- Tokyo Modal -->
+  <div id="modal-tokyo" class="fixed inset-0 flex items-center justify-center modal-overlay hidden transition-opacity duration-300">
+    <div class="bg-indigo-50 dark:bg-gray-700 p-6 rounded-lg w-11/12 md:w-1/2 space-y-4 shadow-2xl">
+      <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">Tokyo Routes</h3>
+      <table class="w-full table-auto text-gray-800 dark:text-gray-200">
+        <thead>
+          <tr class="bg-gray-300 dark:bg-gray-600">
+            <th class="border-b border-gray-400 pb-2 text-left px-2">Route</th>
+            <th class="border-b border-gray-400 pb-2 text-left px-2">Line</th>
+            <th class="border-b border-gray-400 pb-2 text-left px-2">Time</th>
+            <th class="border-b border-gray-400 pb-2 text-left px-2">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hover:bg-indigo-200 dark:hover:bg-gray-600">
+            <td class="py-2 px-2">Tokyo Station → Shibuya</td>
+            <td class="py-2 px-2">JR Yamanote</td>
+            <td class="py-2 px-2">15 min</td>
+            <td class="py-2 px-2">¥200</td>
+          </tr>
+          <tr class="hover:bg-indigo-200 dark:hover:bg-gray-600">
+            <td class="py-2 px-2">Shinjuku → Ginza</td>
+            <td class="py-2 px-2">Tokyo Metro Ginza</td>
+            <td class="py-2 px-2">10 min</td>
+            <td class="py-2 px-2">¥150</td>
+          </tr>
+        </tbody>
+      </table>
+      <button onclick="closeModal('modal-tokyo')" 
+              class="mt-6 bg-gray-600 hover:bg-gray-500 text-white px-4 py-2 rounded transition">
+        Close
+      </button>
+    </div>
+  </div>
+
+  <!-- Hakone Modal -->
+  <div id="modal-hakone" class="fixed inset-0 flex items-center justify-center modal-overlay hidden transition-opacity duration-300">
+    <div class="bg-indigo-50 dark:bg-gray-700 p-6 rounded-lg w-11/12 md:w-1/2 space-y-4 shadow-2xl">
+      <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">Hakone Routes</h3>
+      <table class="w-full table-auto text-gray-800 dark:text-gray-200">
+        <thead>
+          <tr class="bg-gray-300 dark:bg-gray-600">
+            <th class="border-b border-gray-400 pb-2 text-left px-2">Route</th>
+            <th class="border-b border-gray-400 pb-2 text-left px-2">Line</th>
+            <th class="border-b border-gray-400 pb-2 text-left px-2">Time</th>
+            <th class="border-b border-gray-400 pb-2 text-left px-2">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hover:bg-indigo-200 dark:hover:bg-gray-600">
+            <td class="py-2 px-2">Shinjuku → Odawara</td>
+            <td class="py-2 px-2">Odakyu Romancecar</td>
+            <td class="py-2 px-2">75 min</td>
+            <td class="py-2 px-2">¥2,500</td>
+          </tr>
+          <tr class="hover:bg-indigo-200 dark:hover:bg-gray-600">
+            <td class="py-2 px-2">Odawara → Hakone-Yumoto</td>
+            <td class="py-2 px-2">Hakone Tozan</td>
+            <td class="py-2 px-2">15 min</td>
+            <td class="py-2 px-2">¥410</td>
+          </tr>
+        </tbody>
+      </table>
+      <button onclick="closeModal('modal-hakone')" 
+              class="mt-6 bg-gray-600 hover:bg-gray-500 text-white px-4 py-2 rounded transition">
+        Close
+      </button>
+    </div>
+  </div>
+
+  <!-- Osaka Modal -->
+  <div id="modal-osaka" class="fixed inset-0 flex items-center justify-center modal-overlay hidden transition-opacity duration-300">
+    <div class="bg-indigo-50 dark:bg-gray-700 p-6 rounded-lg w-11/12 md:w-1/2 space-y-4 shadow-2xl">
+      <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">Osaka Routes</h3>
+      <table class="w-full table-auto text-gray-800 dark:text-gray-200">
+        <thead>
+          <tr class="bg-gray-300 dark:bg-gray-600">
+            <th class="border-b border-gray-400 pb-2 text-left px-2">Route</th>
+            <th class="border-b border-gray-400 pb-2 text-left px-2">Line</th>
+            <th class="border-b border-gray-400 pb-2 text-left px-2">Time</th>
+            <th class="border-b border-gray-400 pb-2 text-left px-2">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hover:bg-indigo-200 dark:hover:bg-gray-600">
+            <td class="py-2 px-2">Shin-Osaka → Umeda</td>
+            <td class="py-2 px-2">Osaka Metro</td>
+            <td class="py-2 px-2">12 min</td>
+            <td class="py-2 px-2">¥180</td>
+          </tr>
+          <tr class="hover:bg-indigo-200 dark:hover:bg-gray-600">
+            <td class="py-2 px-2">Namba → Tennoji</td>
+            <td class="py-2 px-2">JR Yamatoji</td>
+            <td class="py-2 px-2">20 min</td>
+            <td class="py-2 px-2">¥210</td>
+          </tr>
+        </tbody>
+      </table>
+      <button onclick="closeModal('modal-osaka')" 
+              class="mt-6 bg-gray-600 hover:bg-gray-500 text-white px-4 py-2 rounded transition">
+        Close
+      </button>
+    </div>
+  </div>
+
+  <!-- Kyoto Modal -->
+  <div id="modal-kyoto" class="fixed inset-0 flex items-center justify-center modal-overlay hidden transition-opacity duration-300">
+    <div class="bg-indigo-50 dark:bg-gray-700 p-6 rounded-lg w-11/12 md:w-1/2 space-y-4 shadow-2xl">
+      <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">Kyoto Routes</h3>
+      <table class="w-full table-auto text-gray-800 dark:text-gray-200">
+        <thead>
+          <tr class="bg-gray-300 dark:bg-gray-600">
+            <th class="border-b border-gray-400 pb-2 text-left px-2">Route</th>
+            <th class="border-b border-gray-400 pb-2 text-left px-2">Line</th>
+            <th class="border-b border-gray-400 pb-2 text-left px-2">Time</th>
+            <th class="border-b border-gray-400 pb-2 text-left px-2">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hover:bg-indigo-200 dark:hover:bg-gray-600">
+            <td class="py-2 px-2">Kyoto Station → Gion</td>
+            <td class="py-2 px-2">City Bus</td>
+            <td class="py-2 px-2">30 min</td>
+            <td class="py-2 px-2">¥230</td>
+          </tr>
+          <tr class="hover:bg-indigo-200 dark:hover:bg-gray-600">
+            <td class="py-2 px-2">Shijo → Arashiyama</td>
+            <td class="py-2 px-2">Keifuku Tram</td>
+            <td class="py-2 px-2">25 min</td>
+            <td class="py-2 px-2">¥210</td>
+          </tr>
+        </tbody>
+      </table>
+      <button onclick="closeModal('modal-kyoto')" 
+              class="mt-6 bg-gray-600 hover:bg-gray-500 text-white px-4 py-2 rounded transition">
+        Close
+      </button>
+    </div>
+  </div>
+
+  <!-- Hiroshima Modal -->
+  <div id="modal-hiroshima" class="fixed inset-0 flex items-center justify-center modal-overlay hidden transition-opacity duration-300">
+    <div class="bg-indigo-50 dark:bg-gray-700 p-6 rounded-lg w-11/12 md:w-1/2 space-y-4 shadow-2xl">
+      <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-4">Hiroshima Routes</h3>
+      <table class="w-full table-auto text-gray-800 dark:text-gray-200">
+        <thead>
+          <tr class="bg-gray-300 dark:bg-gray-600">
+            <th class="border-b border-gray-400 pb-2 text-left px-2">Route</th>
+            <th class="border-b border-gray-400 pb-2 text-left px-2">Line</th>
+            <th class="border-b border-gray-400 pb-2 text-left px-2">Time</th>
+            <th class="border-b border-gray-400 pb-2 text-left px-2">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="hover:bg-indigo-200 dark:hover:bg-gray-600">
+            <td class="py-2 px-2">Hiroshima Station → Peace Park</td>
+            <td class="py-2 px-2">Streetcar</td>
+            <td class="py-2 px-2">18 min</td>
+            <td class="py-2 px-2">¥190</td>
+          </tr>
+          <tr class="hover:bg-indigo-200 dark:hover:bg-gray-600">
+            <td class="py-2 px-2">Hiroshima Station → Mazda Museum</td>
+            <td class="py-2 px-2">Local Bus</td>
+            <td class="py-2 px-2">22 min</td>
+            <td class="py-2 px-2">¥220</td>
+          </tr>
+        </tbody>
+      </table>
+      <button onclick="closeModal('modal-hiroshima')" 
+              class="mt-6 bg-gray-600 hover:bg-gray-500 text-white px-4 py-2 rounded transition">
+        Close
+      </button>
     </div>
 </div>
 
-        <div class="section">
-            <h2 style="color: rgb(0, 255, 149);">MAYBE'S</h2>
-            <h3>Potential Spendings</h3>
-            <ul>
-                <li><strong>Airport Longue: $28 PP, unlimited drinks, unlimited food. 3 Hours. </strong></li>
-                <li><strong>- SPA ($30) 2/3hours</strong></li>
-                <li><strong>- Beer Boat tour of Hamburg</strong></li>
-                <li><strong>- Mönkebergstrasse - food/drink venues along the river</strong></li>
-            </ul>
+  
+
+<!-- Kyoto Modal -->
+<div id="modal-kyoto" class="fixed inset-0 flex items-center justify-center modal-overlay hidden">
+  <div class="bg-white dark:bg-gray-800 p-6 rounded-lg w-11/12 md:w-1/2 space-y-4">
+    <h3 class="text-2xl font-bold mb-4">Kyoto Details</h3>
+    <p>
+      Immerse yourself in Kyoto’s serene temples, traditional tea houses, and exquisite gardens. Experience the timeless beauty and enduring cultural heritage of Japan’s ancient capital.
+    </p>
+
+    <!-- Transportation Information -->
+    <div class="mt-4 border-t border-gray-300 pt-4">
+      <h4 class="text-xl font-semibold">Transport & Connectivity</h4>
+      <p class="mt-2 text-gray-700 dark:text-gray-300">
+        Kyoto is exceptionally well connected by JR trains and local bus routes. The JR Kyoto Station serves as a major transit hub for intercity travel, while intimate bus routes and even bicycle rentals let you explore its historical districts with ease.
+      </p>
     </div>
+
+    <!-- Hotel Recommendations -->
+    <div class="mt-4 border-t border-gray-300 pt-4">
+      <h4 class="text-xl font-semibold">Hotel Recommendations</h4>
+      <ul class="mt-2 list-disc list-inside text-blue-600">
+        <li><a href="https://www.booking.com/hotel/jp/hotel-granvia-kyoto.html" target="_blank" rel="noopener noreferrer">Hotel Granvia Kyoto</a></li>
+        <li><a href="https://www.booking.com/hotel/jp/the-ritz-carlton-kyoto.html" target="_blank" rel="noopener noreferrer">The Ritz-Carlton Kyoto</a></li>
+        <li><a href="https://www.booking.com/hotel/jp/kyoto-hotel-okura.html" target="_blank" rel="noopener noreferrer">Kyoto Hotel Okura</a></li>
+      </ul>
+    </div>
+
+    <button onclick="closeModal('modal-kyoto')" class="mt-6 bg-red-600 text-white px-4 py-2 rounded">
+      Close
+    </button>
+  </div>
+</div>
+
+<!-- Hiroshima Modal -->
+<div id="modal-hiroshima" class="fixed inset-0 flex items-center justify-center modal-overlay hidden">
+  <div class="bg-white dark:bg-gray-800 p-6 rounded-lg w-11/12 md:w-1/2 space-y-4">
+    <h3 class="text-2xl font-bold mb-4">Hiroshima Details</h3>
+    <p>
+      Learn about Hiroshima’s resilient history and poignant memorials. Explore the Peace Park, informative museums, and modern cityscapes that honor the past.
+    </p>
+
+    <!-- Transportation Information -->
+    <div class="mt-4 border-t border-gray-300 pt-4">
+      <h4 class="text-xl font-semibold">Transport & Connectivity</h4>
+      <p class="mt-2 text-gray-700 dark:text-gray-300">
+        Hiroshima is easily reached via the Shinkansen from Osaka or Kyoto. Once in the city, a reliable tram network along with local buses and taxis ensures that all key historical sites – including the Peace Memorial Park – are within easy reach.
+      </p>
+    </div>
+
+    <!-- Hotel Recommendations -->
+    <div class="mt-4 border-t border-gray-300 pt-4">
+      <h4 class="text-xl font-semibold">Hotel Recommendations</h4>
+      <ul class="mt-2 list-disc list-inside text-blue-600">
+        <li><a href="https://www.booking.com/hotel/jp/sheraton-grand-hiroshima.html" target="_blank" rel="noopener noreferrer">Sheraton Grand Hiroshima Hotel</a></li>
+        <li><a href="https://www.booking.com/hotel/jp/rihga-royal-hotel-hiroshima.html" target="_blank" rel="noopener noreferrer">Rihga Royal Hotel Hiroshima</a></li>
+        <li><a href="https://www.booking.com/hotel/jp/hotel-granvia-hiroshima.html" target="_blank" rel="noopener noreferrer">Hotel Granvia Hiroshima</a></li>
+      </ul>
+    </div>
+
+    <button onclick="closeModal('modal-hiroshima')" class="mt-6 bg-red-600 text-white px-4 py-2 rounded">
+      Close
+    </button>
+  </div>
+</div>
+
+
+  <!-- Embedded Map Section -->
+  <section id="map" class="container mx-auto px-4 py-12" data-aos="fade-up">
+    <h2 class="text-3xl font-bold text-center mb-6">Map View</h2>
+    <div class="w-full h-96 rounded overflow-hidden shadow">
+      <iframe
+        class="w-full h-full"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236884.049158438!2d129.46567156660763!3d36.104814112045276!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354c10070b038b41%3A0x6c58a33dea70685a!2sJapan!5e0!3m2!1sen!2sus!4v1683933357430!5m2!1sen!2sus"
+        frameborder="0"
+        style="border:0;"
+        allowfullscreen=""
+        aria-hidden="false"
+        tabindex="0"
+      ></iframe>
+    </div>
+  </section>
+
+  <!-- Footer with Newsletter Signup & Social Links -->
+  <footer class="bg-gray-900 text-white p-8">
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div>
+        <h4 class="text-xl font-bold mb-2">About Me</h4>
+        <p>
+          Software Engineer, First class Computer Science student.
+        </p>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold mb-2">Contact Me</h4>
+        <form class="flex flex-col">
+          <input type="email" placeholder="Your email" class="p-2 mb-2 rounded text-gray-800" />
+          <button type="submit" style="background-color: rgb(172, 112, 0);" class="bg-orange-500 hover:bg-orange-600 px-4 py-2 rounded">Submit</button>
+        </form>
+      </div>
+      <div>
+        <h4 class="text-xl font-bold mb-2">Follow Me</h4>
+        <div class="flex space-x-4 text-2xl">
+          <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+          <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+          <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+    </div>
+    <p class="text-center mt-8">&copy; 2025 Callum Apps. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    // Initialize AOS animations
+    AOS.init({ once: true });
+
+    // Initialize the hero slider
+    var heroSwiper = new Swiper(".swiper-container", {
+      effect: "fade",
+      loop: true,
+      autoplay: { delay: 5000 },
+      pagination: { el: ".swiper-pagination", clickable: true },
+    });
+
+    // Initialize the gallery slider (if you plan to add one later)
+    var gallerySwiper = new Swiper(".gallery-slider", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: { delay: 3000 },
+      pagination: { el: ".gallery-slider .swiper-pagination", clickable: true },
+      breakpoints: {
+        640: { slidesPerView: 2 },
+        1024: { slidesPerView: 3 },
+      },
+    });
+
+    // Toggle mobile menu
+    document.getElementById("menu-toggle").addEventListener("click", function () {
+      document.getElementById("mobile-menu").classList.toggle("hidden");
+    });
+
+    // Toggle dark/light mode
+    document.getElementById("mode-toggle").addEventListener("click", function () {
+      document.body.classList.toggle("light-mode");
+    });
+
+    // FAQ Accordion behavior
+    document.querySelectorAll('.faq-question').forEach(item => {
+      item.addEventListener('click', function () {
+        const answer = this.nextElementSibling;
+        answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+        this.querySelector('i').classList.toggle('fa-chevron-down');
+        this.querySelector('i').classList.toggle('fa-chevron-up');
+      });
+    });
+  </script>
 </body>
 </html>
