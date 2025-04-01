@@ -109,6 +109,25 @@
     .faq-answer {
       display: none;
     }
+
+
+    /* Zoom Toggle Button */
+    #zoom-fit-button {
+      position: fixed;
+      bottom: 4.5rem;
+      right: 1.5rem;
+      background: #2563eb;
+      color: white;
+      padding: 0.75rem 1rem;
+      border-radius: 0.375rem;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+      z-index: 50;
+    }
+    #zoom-fit-button:hover {
+      background: #1d4ed8;
+      transform: translateY(-3px);
+    }
   </style>
 
   <script>
@@ -118,6 +137,52 @@
     }
     function closeModal(modalId) {
       document.getElementById(modalId).classList.add("hidden");
+    }
+
+        // Modal functions: open and close modals by ID
+        function openModal(modalId) {
+      document.getElementById(modalId).classList.remove("hidden");
+    }
+    function closeModal(modalId) {
+      document.getElementById(modalId).classList.add("hidden");
+    }
+
+    // Modal functions: open and close modals by ID
+    function openModal(modalId) {
+      document.getElementById(modalId).classList.remove("hidden");
+    }
+    function closeModal(modalId) {
+      document.getElementById(modalId).classList.add("hidden");
+    }
+
+    // Variable to track current zoom state
+    let isFitted = false;
+
+    // Toggle viewport zoom for mobile devices by re-creating the meta tag.
+    function toggleZoom() {
+      var head = document.querySelector("head");
+      var oldViewport = document.querySelector('meta[name="viewport"]');
+      if (!isFitted) {
+        // Remove existing meta tag
+        head.removeChild(oldViewport);
+        // Create a new meta tag with alternative zoom settings
+        var newViewport = document.createElement("meta");
+        newViewport.name = "viewport";
+        newViewport.content = "width=device-width, initial-scale=0.9, maximum-scale=1.0";
+        head.appendChild(newViewport);
+        isFitted = true;
+      } else {
+        // Remove the current meta tag
+        head.removeChild(oldViewport);
+        // Re-create the default meta tag
+        var defaultViewport = document.createElement("meta");
+        defaultViewport.name = "viewport";
+        defaultViewport.content = "width=device-width, initial-scale=1";
+        head.appendChild(defaultViewport);
+        isFitted = false;
+      }
+      // (Optional) Log for debugging
+      console.log("Viewport toggled. isFitted:", isFitted);
     }
   </script>
 </head>
@@ -251,10 +316,6 @@
     </a>
   </div>
 </section>
-
-
-
-
 
   <!-- Tokyo Section -->
   <section id="tokyo" class="section-card p-6 mb-8 border rounded shadow" data-aos="fade-right">
@@ -467,6 +528,11 @@
        class="fixed bottom-4 right-4 bg-indigo-600 text-white px-3 py-1 rounded transition hover:bg-indigo-700">
     ↑ Top
   </div>
+
+    <!-- Zoom Fit Button (visible on mobile) -->
+    <button id="zoom-fit-button" onclick="toggleZoom()">
+      + Fit
+    </button>
   
 </main>
 
@@ -871,5 +937,11 @@
       });
     });
   </script>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 </body>
 </html>
